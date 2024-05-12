@@ -1,0 +1,41 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX : <http://www.semanticweb.org/lukasgar/ontologies/2024/3/untitled-ontology-3/>
+INSERT {
+?node rdf:type :SeniorTeacher ;
+:personName ?prop0 ;
+:personId ?prop1 .
+}
+WHERE {
+VALUES (?node ?prop0 ?prop1)
+{
+(:Teacher_1 "Teacher 1" "19630126-0001") 
+(:Teacher_2 "Teacher 2" "19600814-0002") 
+(:Teacher_3 "Teacher 3" "19600905-0003") 
+(:Teacher_4 "Teacher 4" "19590129-0004") 
+(:Teacher_5 "Teacher 5" "19610623-0005") 
+(:Teacher_6 "Teacher 6" "19610620-0006") 
+(:Teacher_7 "Teacher 7" "19580218-0007") 
+(:Teacher_8 "Teacher 8" "19570828-0008") 
+(:Teacher_9 "Teacher 9" "19690408-0009") 
+(:Teacher_10 "Teacher 10" "19560612-0010") 
+(:Teacher_11 "Teacher 11" "19570615-0011") 
+(:Teacher_12 "Teacher 12" "19570826-0012") 
+(:Teacher_13 "Teacher 13" "19640414-0013") 
+(:Teacher_14 "Teacher 14" "19611219-0014") 
+(:Teacher_15 "Teacher 15" "19690513-0015") 
+(:Teacher_16 "Teacher 16" "19560812-0016") 
+(:Teacher_17 "Teacher 17" "19580515-0017") 
+(:Teacher_18 "Teacher 18" "19601021-0018") 
+(:Teacher_19 "Teacher 19" "19650303-0019") 
+(:Teacher_20 "Teacher 20" "19660630-0020") 
+(:Teacher_21 "Teacher 21" "19600529-0021") 
+(:Teacher_22 "Teacher 22" "19690917-0022") 
+(:Teacher_23 "Teacher 23" "19620522-0023") 
+(:Teacher_24 "Teacher 24" "19620831-0024") 
+(:Teacher_25 "Teacher 25" "19560705-0025") 
+(:Teacher_26 "Teacher 26" "19620424-0026") 
+(:Teacher_27 "Teacher 27" "19610918-0027") 
+(:Teacher_28 "Teacher 28" "19680712-0028") 
+(:Teacher_29 "Teacher 29" "19640220-0029") 
+(:Teacher_30 "Teacher 30" "19561222-0030")}}
+

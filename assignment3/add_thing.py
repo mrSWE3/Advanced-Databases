@@ -12,7 +12,8 @@ def insert_clazz(
                  contex = "",
                  prefixes = []):
     assert(all([len(values[0]) == len(v) for v in values]))
-    assert(len(properties) == len(values[0]))
+    if(len(values) != 0):
+        assert(len(properties) == len(values[0]))
     pefix_statment = " \n".join([f"PREFIX {p}" for p in prefixes])
 
     prop_statments = [f":{p} ?prop{i}" for i,p in enumerate(properties)]
@@ -24,7 +25,10 @@ def insert_clazz(
     if node_names == None:
         node_names = [f"{contex}:{clazz}{i}" for i in range(node_start_index, len(values))]
     else:
-        node_names = [name.replace(" ", "_") for name in node_names]
+        node_names = [":"+name.replace(" ", "_") for name in node_names]
+        
+    if len(values) == 0:
+        values = [[] for _ in range(len(node_names))]
     for v, node_name in zip(values, node_names):
         prop_values = [f"\"{p}\"" for p in v]
         statment_segments = [node_name] + prop_values
