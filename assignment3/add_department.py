@@ -9,9 +9,9 @@ if __name__ == "__main__":
 
         names = list(set([l[2] for l in lines]))
         values = [[n] for n in names]
-        insert = insert_clazz(clazz="Programme", 
+        insert = insert_clazz(clazz="Department", 
                      node_names=names,
-                     properties=["programmeCode", "programmeBelongsTo", ""],
+                     properties=["departmentName"],
                      values=values, 
                      prefixes=PREFIXES
                      )
