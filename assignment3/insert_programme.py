@@ -7,11 +7,12 @@ if __name__ == "__main__":
         # Create a CSV reader object
         lines = [l for l in csv.reader(csvfile)][1:]
 
-        names = list(set([l[2] for l in lines]))
-        values = [[n] for n in names]
+        names = [l[1] for l in lines]
+        values = [n for n in lines]
         insert = insert_clazz(clazz="Programme", 
                      node_names=names,
-                     properties=["programmeCode", "programmeBelongsTo", ""],
+                     properties=["programmeName", "programmeCode"],
+                     objectProps=["programmeBelongsTo", "hasDirector"],
                      values=values, 
                      prefixes=PREFIXES
                      )
