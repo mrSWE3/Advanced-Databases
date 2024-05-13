@@ -13,7 +13,7 @@ if __name__ == "__main__":
             values = [[l[0], l[1], l[2], l[3],l[-3],l[-2],l[-1], l[4]] for l in lines]
             insert = insert_clazz(clazz="CourseInstance", 
                         node_names=names,
-                        properties=["courseInstanceId", "courseInstanceStudyPeriod", 
+                        properties=["courseInstanceOf", "courseInstanceStudyPeriod", 
                                     "courseInstanceAcademicYear", "courseInstanceId",
                                     "courseInstanceCapacity", "seniorPlanningHours", 
                                     "assistantPlanningHours"],
