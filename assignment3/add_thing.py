@@ -7,19 +7,24 @@ def insert_clazz(
                  clazz: str,
                  node_names: Union[List[str], None] = None,
                  properties: List[str] = [],
+                 objectProps: List[str] = [],
                  values: List[List[str]] = [],
                  node_start_index = 0,
                  contex = "",
                  prefixes = []):
-    assert(all([len(values[0]) == len(v) for v in values]))
+    assert(all([len(values[0]) == len(v) for v in (values)]))
     if(len(values) != 0):
-        assert(len(properties) == len(values[0]))
+        assert(len(properties) + len(objectProps) == len(values[0]))
+
     pefix_statment = " \n".join([f"PREFIX {p}" for p in prefixes])
 
     prop_statments = [f":{p} ?prop{i}" for i,p in enumerate(properties)]
-    prop_statment = " ;\n".join(prop_statments) + " .\n"
+    objectProp_statments = [f":{p} ?objectProp{i}" for i,p in enumerate(objectProps)]
+    prop_statment = " ;\n".join(prop_statments + objectProp_statments) + " .\n"
 
     prop_names = " ".join([f"?prop{i}" for i in range(len(properties))])
+    objectProp_names = " ".join([f"?objectProp{i}" for i in range(len(objectProps))])
+
 
     values_statemts = []
     if node_names == None:
@@ -30,7 +35,8 @@ def insert_clazz(
     if len(values) == 0:
         values = [[] for _ in range(len(node_names))]
     for v, node_name in zip(values, node_names):
-        prop_values = [f"\"{p}\"" for p in v]
+        prop_values = [f"\"{p}\"" for p in v[:len(properties)]] + \
+            [f":{p.replace(" ", "_")}" for p in v[len(properties):]]
         statment_segments = [node_name] + prop_values
         statment = f"({" ".join(statment_segments)})"
         values_statemts.append(statment)
@@ -42,7 +48,7 @@ def insert_clazz(
             prop_statment                                       + \
             "}\n"                                               + \
             "WHERE {\n"                                         + \
-            f"VALUES (?node {prop_names})\n"                    + \
+            f"VALUES (?node {prop_names} {objectProp_names})\n"                    + \
                 "{\n"                                           + \
                     values_statment                             + \
                 "}"                                             + \
@@ -55,6 +61,7 @@ if __name__ == "__main__":
                     node_names=["Student 1", 
                                 "Student 2"],
                     properties=["personId", "personName"],
-                    values=[[   "1",        "A"], 
-                            [   "2",        "B"]],
+                    objectProps=["hasFriend"], 
+                    values=[[   "1",        "A", "Student 2"], 
+                            [   "2",        "B", "Student 1"]],
                     prefixes=PREFIXES))
