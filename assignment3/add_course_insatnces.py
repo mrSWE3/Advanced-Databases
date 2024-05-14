@@ -10,15 +10,15 @@ if __name__ == "__main__":
             print(lines[0])
 
             names = [l[3] for l in lines]
-            values = [[l[0], l[1], l[2], l[3],l[-3],l[-2],l[-1], l[4]] for l in lines]
+            values = [[l[1], l[2], l[3],l[-3],l[-2],l[-1], l[4], l[0]] for l in lines]
             insert = insert_clazz(clazz="CourseInstance", 
                         node_names=names,
-                        properties=["courseInstanceOf", "courseInstanceStudyPeriod", 
+                        properties=["courseInstanceStudyPeriod", 
                                     "courseInstanceAcademicYear", "courseInstanceId",
                                     "courseInstanceCapacity", "seniorPlanningHours", 
                                     "assistantPlanningHours"],
                                     
-                        objectProps=["courseExaminedBy"],
+                        objectProps=["courseExaminedBy", "courseInstanceOf"],
                         values=values, 
                         prefixes=PREFIXES
                         )
