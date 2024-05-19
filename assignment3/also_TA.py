@@ -7,7 +7,7 @@ if __name__ == "__main__":
         # Create a CSV reader object
         lines = [l for l in csv.reader(csvfile)][1:]
 
-        names = [l[0] for l in lines]
+        names = [l[1] for l in lines]
         values = [[l[3]] for l in lines]
         insert = insert_clazz(clazz="TeachingAssistant", 
                      node_names=names,
