@@ -1,6 +1,8 @@
 from create_grapth import *
 import csv
 
+
+
 def group_by_first_element(tuples):
     grouped_dict = {}
     for tup in tuples:
@@ -18,5 +20,8 @@ with open('Programme_Courses.csv', newline='') as csvfile:
 values = [(l[0], l[2]) for l in lines]
 grouped = group_by_first_element(values)
 values = sum([[[year,k] for year in v] for k,v in grouped.items()], [])
-values = [[f"{t[0]}_{t[1]}", t[0]] for t in values]
-print(create_nodes(PI.n, [PI.year], [], values))
+weak_values = [(Node_id(Programme.n, [Programme.name], [v[1]]), [v[0]]) for v in values]
+#print(weak_values)
+print(create_label(PI.n, [PI.year], []))
+print(create_weak_node_value([PI.n], [PI.year], weak_values, PI.belongs_to))
+#print(create_nodes(PI.n, [PI.year], [], values))
