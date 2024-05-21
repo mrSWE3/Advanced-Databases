@@ -37,7 +37,8 @@ def create_label(label: str, props: List[str], uniq_props: List[str]):
 
 def fill(values: List[str], label: str, props: List[str], node_name:str = "n"):   
     prop_list = ", ".join([f"{p}: \"{v}\"" for p,v in zip(props, values)])
-    return f"{node_name}:{label} {"{"} {prop_list} {"}"}"
+    pl = f" {"{"} {prop_list} {"}"}" if len(prop_list) > 0 else ""
+    return f"{node_name}:{label}{pl}"
 
 def create_value(labels: List[str], props: List[str], values: List[List[str]]):
     assert len(props) == len(values[0])
