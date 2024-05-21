@@ -5,11 +5,9 @@ class Person:
     id = "id"
     name = "name"
         
+
 class Student:
     n = "Student"
-class Teacher:
-    n = "Teacher"
-    belongs_to = "BELONGS_TO"
 class TA:
     n = "TeachingAssistant"
 class ST:
@@ -79,10 +77,10 @@ def create_relation(relation: str, relation_props: List[str], uniqe_relation_pro
     uniqs = [f"CREATE CONSTRAINT ON ()-[r:{relation}]-() ASSERT r.{up} IS UNIQUE;" for up in uniqe_relation_props]
     statements = "\n".join(constraints + uniqs)
     return statements
-def create_edge(from_label:str, from_keys: List[str], from_values: List[str],
-                 to_label: str , to_keys: List[str], to_values: List[str],
+def create_edge(from_name: str, from_label:str, from_keys: List[str], from_values: List[str],
+                 to_name: str, to_label: str , to_keys: List[str], to_values: List[str],
                  relation: str, relation_props: List[str], relation_values:List[str], 
-                 multiway = False, extra_match = None, from_name = "a", to_name = "b"):
+                 multiway = False, extra_match = None,):
     relation_prop_statment = fill(relation_values, relation, relation_props)
     from_dict = fill(from_values, from_label, from_keys, from_name)
     to_dict = fill(to_values, to_label, to_keys, to_name)
@@ -92,9 +90,11 @@ def create_edge(from_label:str, from_keys: List[str], from_values: List[str],
 
 @dataclass
 class Edge_data:
+    from_name: str
     from_label: str
     from_keys: List[str]
     from_values: List[str]
+    to_name: str
     to_label: str
     to_keys: List[str]
     to_values: List[str]
@@ -106,9 +106,9 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
                  multiway = False):
     """Good func"""
     relation_statments = create_relation(relation, relation_props, uniqe_relation_props)
-    values_statments = "\n".join([create_edge(ed.from_label, ed.from_keys, ed.from_values,
-                                    ed.to_label, ed.to_keys, ed.to_values,
-                                    relation, relation_props, ed.relation_values, multiway) for ed in edge_data])
+    values_statments = "\n".join([create_edge(f"a{i}",ed.from_label, ed.from_keys, ed.from_values,
+                                    f"b{i}", ed.to_label, ed.to_keys, ed.to_values,
+                                    relation, relation_props, ed.relation_values, multiway) for i, ed in enumerate(edge_data)])
     return relation_statments + "\n" + values_statments
 
 def match(from_name: str, from_label:str, from_keys: List[str], from_values: List[str],
@@ -124,7 +124,7 @@ if __name__ == "__main__":
                       props=["name", "id"], 
                       uniq_props=["name"],
                       values=[["KG", "1"],["Lukas","2"]]))
-    ed = Edge_data("Student", ["name"], ["Lukas"], "Student", ["name"], ["KG"], ["2021"])
+    ed = Edge_data("a", "Student", ["name"], ["Lukas"], "b", "Student", ["name"], ["KG"], ["2021"])
     print(create_edges("Friend", ["started"], ["started"], 
                        [ed],True))
    
