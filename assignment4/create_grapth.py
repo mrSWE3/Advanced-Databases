@@ -15,6 +15,11 @@ class ST:
 class Department:
     n = "Department"
     name = "name"
+class Division:
+    n = "Division"
+    name = "name"
+    belongs_to = "BELONGS_TO"
+    under = "UNDER"
 class Programme:
     n = "Programme"
     name = "name"
@@ -56,7 +61,7 @@ def create_edge(from_label:str, from_keys: List[str], from_values: List[str],
     relation_prop_statment = fill(relation_values, relation, relation_props)
     from_dict = fill(from_values, from_label, from_keys, "a")
     to_dict = fill(to_values, to_label, to_keys, "b")
-    return f"MATCH ({from_dict}), ({to_dict}) \n" + \
+    return f"MATCH ({from_dict}), ({to_dict}) " + \
            f"CREATE (a)-[{relation_prop_statment}]-{">" if not multiway else ""}(b)"
 
 @dataclass
@@ -75,8 +80,8 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
                  multiway = False):
     """Good func"""
     relation_statments = create_relation(relation, relation_props, uniqe_relation_props)
-    values_statments = "n".join([create_edge(ed.from_label,ed.from_keys, ed.from_values,
-                                    ed.to_label,ed.to_keys, ed.to_values,
+    values_statments = "\n".join([create_edge(ed.from_label, ed.from_keys, ed.from_values,
+                                    ed.to_label, ed.to_keys, ed.to_values,
                                     relation, relation_props, ed.relation_values, multiway) for ed in edge_data])
     return relation_statments + "\n" + values_statments
 
