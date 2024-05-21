@@ -1,5 +1,5 @@
 from create_grapth import *
-label = Teacher.n
+label = ST.n
 props = [Person.id, Person.name]
 
 print(create_label(label=label, props=props, uniq_props=[Person.id]))
@@ -11,4 +11,4 @@ with open('../Senior_Teachers.csv', newline='') as teacher_csv:
     for id, name, division in teachers:
         t[id] = (name, division)
         
-    print(create_value([Person.n, Teacher.n], props, [[id, name] for id, (name, division) in t.items()]))
+    print(create_value([Person.n, Teacher.n, ST.n], props, [[id, name] for id, (name, division) in t.items()]))

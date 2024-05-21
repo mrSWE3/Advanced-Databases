@@ -9,11 +9,11 @@ class Student:
     n = "Student"
 class Teacher:
     n = "Teacher"
-    belongs_to = "BELONGS_TO"
 class TA:
     n = "TeachingAssistant"
 class ST:
     n = "SeniorTeacher"
+    belongs_to = "BELONGS_TO"
 class Department:
     n = "Department"
     name = "name"
