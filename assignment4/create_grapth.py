@@ -5,9 +5,11 @@ class Person:
     id = "id"
     name = "name"
         
-
 class Student:
     n = "Student"
+class Teacher:
+    n = "Teacher"
+    belongs_to = "BELONGS_TO"
 class TA:
     n = "TeachingAssistant"
 class ST:
