@@ -4,7 +4,7 @@ props = [Division.name]
 
 print(create_relation(Division.under, [], []))
 
-with open('../Senior_Teachers.csv', newline='') as division_csv:
+with open('/Senior_Teachers.csv', newline='') as division_csv:
     lines = division_csv.readlines()[1:]
     divisions_and_departments = map(lambda d: [d.split(",")[-1].rstrip('\n'), d.split(",")[2]], lines)
     dd = dict()

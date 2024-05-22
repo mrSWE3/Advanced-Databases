@@ -1,3 +1,15 @@
+//from: insert_department.txt
+CREATE CONSTRAINT ON (n:Department) ASSERT exists(n.name);
+CREATE CONSTRAINT ON (n:Department) ASSERT n.name IS UNIQUE;
+CREATE (:Department { name: "D5" }),
+(:Department { name: "D8" }),
+(:Department { name: "D4" }),
+(:Department { name: "D7" }),
+(:Department { name: "D1" }),
+(:Department { name: "D6" }),
+(:Department { name: "D3" }),
+(:Department { name: "D2" })
+//from: create_divisions.txt
 CREATE CONSTRAINT ON (n:Division) ASSERT exists(n.name);
 CREATE CONSTRAINT ON (n:Division) ASSERT n.name IS UNIQUE;
 
