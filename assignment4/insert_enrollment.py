@@ -8,8 +8,16 @@ with open('Students.csv', newline='') as csvfile:
 print(create_relation(Enrollment.n, [Enrollment.graduated], []))
 
 
-for _,student_id,programme,year,graduated in lines:
-    
-    print(create_edge(Student.n, [Person.id], [student_id], 
-                      PI.n,[PI.year],[year], Enrollment.n,
-                       [Enrollment.graduated], [graduated]))
+
+for i, (_,student_id,programme_code,year,graduated )in list(enumerate(lines))[:1]:
+    pi_name = f"PI{i}"
+    p_name = f"P{i}"
+    s_name = f"S{i}"
+
+    programme_match = match(p_name, Programme.n, [Programme.code], [programme_code])
+    belongs_to_match = match_on_edge(pi_name, p_name, PI.belongs_to, [], [])
+    extra_matches = f"{programme_match}\n{belongs_to_match}"
+    print(create_edge(s_name, Student.n, [Person.id], [student_id], 
+                      pi_name,PI.n,[PI.year],[year], Enrollment.n,
+                       [Enrollment.graduated], [graduated], 
+                       extra_match=extra_matches, multiway=True))
