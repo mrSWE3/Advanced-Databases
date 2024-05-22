@@ -39,7 +39,7 @@ def create_label(label: str, props: List[str], uniq_props: List[str]):
     statements = "\n".join(constraints + uniqs)
     return statements
 
-def fill(values: List[str], label: str, props: List[str], node_name:str = "n"):   
+def fill(values: List[str], label: str, props: List[str], node_name:str = ""):   
     prop_list = ", ".join([f"{p}: \"{v}\"" for p,v in zip(props, values)])
     pl = f" {"{"} {prop_list} {"}"}" if len(prop_list) > 0 else ""
     return f"{node_name}:{label}{pl}"
@@ -84,9 +84,9 @@ def create_edge(from_name: str, from_label:str, from_keys: List[str], from_value
     relation_prop_statment = fill(relation_values, relation, relation_props)
     from_dict = fill(from_values, from_label, from_keys, from_name)
     to_dict = fill(to_values, to_label, to_keys, to_name)
-    return f"MATCH ({from_dict}), ({to_dict}) " + \
-            (extra_match + "\n" if extra_match != None else "") + \
-           f"CREATE (a)-[{relation_prop_statment}]-{">" if not multiway else ""}(b)"
+    return f"MATCH ({from_dict}), ({to_dict}) " + "\n" + \
+            (extra_match + "\n" if extra_match != None else "")  + \
+           f"CREATE ({from_name})-[{relation_prop_statment}]-{">" if not multiway else ""}({to_name})"
 
 @dataclass
 class Edge_data:
@@ -111,12 +111,15 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
                                     relation, relation_props, ed.relation_values, multiway) for i, ed in enumerate(edge_data)])
     return relation_statments + "\n" + values_statments
 
-def match(from_name: str, from_label:str, from_keys: List[str], from_values: List[str],
-                 to_label: str , to_keys: List[str], to_values: List[str],
-                    to_name: str):
-    from_dict = fill(from_values, from_label, from_keys,from_name )
-    to_dict = fill(to_values, to_label, to_keys, to_name)
-    return f"MATCH ({from_dict}), ({to_dict}) "
+def match_on_edge(from_name: str,to_name: str,
+                 relation: str, relation_props: List[str], relation_values:List[str], 
+                 multiway = False, ):
+    edge_dict = fill(relation_values, relation, relation_props)
+    return f"MATCH ({from_name})-[{edge_dict}]-{">" if not multiway else ""}({to_name})"
+
+def match(name: str, label:str, keys: List[str], values: List[str]):
+    d = fill(values, label, keys,name )
+    return f"MATCH ({d})"
 
 
 if __name__ == "__main__":
