@@ -1,0 +1,67 @@
+CREATE CONSTRAINT ON (n:Programme) ASSERT exists(n.name);
+CREATE CONSTRAINT ON (n:Programme) ASSERT exists(n.code);
+CREATE CONSTRAINT ON (n:Programme) ASSERT n.code IS UNIQUE;
+CREATE (:Programme { name: "P-01", code: "10001" }),
+(:Programme { name: "P-11", code: "10011" }),
+(:Programme { name: "P-12", code: "10012" }),
+(:Programme { name: "P-13", code: "10013" }),
+(:Programme { name: "P-14", code: "10014" }),
+(:Programme { name: "P-21", code: "10021" }),
+(:Programme { name: "P-31", code: "10031" }),
+(:Programme { name: "P-32", code: "10032" }),
+(:Programme { name: "P-33", code: "10033" }),
+(:Programme { name: "P-34", code: "10034" }),
+(:Programme { name: "P-41", code: "10041" }),
+(:Programme { name: "P-42", code: "10042" }),
+(:Programme { name: "P-51", code: "10051" }),
+(:Programme { name: "P-52", code: "10052" }),
+(:Programme { name: "P-53", code: "10053" }),
+(:Programme { name: "P-54", code: "10054" }),
+(:Programme { name: "P-61", code: "10061" }),
+(:Programme { name: "P-71", code: "10071" }),
+(:Programme { name: "P-72", code: "10072" }),
+(:Programme { name: "P-73", code: "10073" }),
+(:Programme { name: "P-74", code: "10074" })
+
+MATCH (a0:Programme { code: "10001" }), (b0:Department { name: "D1" }) 
+CREATE (a0)-[:belongsTo]->(b0)
+MATCH (a1:Programme { code: "10011" }), (b1:Department { name: "D2" }) 
+CREATE (a1)-[:belongsTo]->(b1)
+MATCH (a2:Programme { code: "10012" }), (b2:Department { name: "D2" }) 
+CREATE (a2)-[:belongsTo]->(b2)
+MATCH (a3:Programme { code: "10013" }), (b3:Department { name: "D2" }) 
+CREATE (a3)-[:belongsTo]->(b3)
+MATCH (a4:Programme { code: "10014" }), (b4:Department { name: "D2" }) 
+CREATE (a4)-[:belongsTo]->(b4)
+MATCH (a5:Programme { code: "10021" }), (b5:Department { name: "D3" }) 
+CREATE (a5)-[:belongsTo]->(b5)
+MATCH (a6:Programme { code: "10031" }), (b6:Department { name: "D4" }) 
+CREATE (a6)-[:belongsTo]->(b6)
+MATCH (a7:Programme { code: "10032" }), (b7:Department { name: "D4" }) 
+CREATE (a7)-[:belongsTo]->(b7)
+MATCH (a8:Programme { code: "10033" }), (b8:Department { name: "D4" }) 
+CREATE (a8)-[:belongsTo]->(b8)
+MATCH (a9:Programme { code: "10034" }), (b9:Department { name: "D4" }) 
+CREATE (a9)-[:belongsTo]->(b9)
+MATCH (a10:Programme { code: "10041" }), (b10:Department { name: "D5" }) 
+CREATE (a10)-[:belongsTo]->(b10)
+MATCH (a11:Programme { code: "10042" }), (b11:Department { name: "D5" }) 
+CREATE (a11)-[:belongsTo]->(b11)
+MATCH (a12:Programme { code: "10051" }), (b12:Department { name: "D6" }) 
+CREATE (a12)-[:belongsTo]->(b12)
+MATCH (a13:Programme { code: "10052" }), (b13:Department { name: "D6" }) 
+CREATE (a13)-[:belongsTo]->(b13)
+MATCH (a14:Programme { code: "10053" }), (b14:Department { name: "D6" }) 
+CREATE (a14)-[:belongsTo]->(b14)
+MATCH (a15:Programme { code: "10054" }), (b15:Department { name: "D6" }) 
+CREATE (a15)-[:belongsTo]->(b15)
+MATCH (a16:Programme { code: "10061" }), (b16:Department { name: "D7" }) 
+CREATE (a16)-[:belongsTo]->(b16)
+MATCH (a17:Programme { code: "10071" }), (b17:Department { name: "D8" }) 
+CREATE (a17)-[:belongsTo]->(b17)
+MATCH (a18:Programme { code: "10072" }), (b18:Department { name: "D8" }) 
+CREATE (a18)-[:belongsTo]->(b18)
+MATCH (a19:Programme { code: "10073" }), (b19:Department { name: "D8" }) 
+CREATE (a19)-[:belongsTo]->(b19)
+MATCH (a20:Programme { code: "10074" }), (b20:Department { name: "D8" }) 
+CREATE (a20)-[:belongsTo]->(b20)

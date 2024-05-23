@@ -1,0 +1,61 @@
+CREATE CONSTRAINT ON (n:Division) ASSERT exists(n.name);
+CREATE CONSTRAINT ON (n:Division) ASSERT n.name IS UNIQUE;
+CREATE (:Division { name: "D4-3" }),
+(:Division { name: "D7-4" }),
+(:Division { name: "D7-1" }),
+(:Division { name: "D3-3" }),
+(:Division { name: "D5-2" }),
+(:Division { name: "D5-0" }),
+(:Division { name: "D4-1" }),
+(:Division { name: "D4-0" }),
+(:Division { name: "D3-5" }),
+(:Division { name: "D3-2" }),
+(:Division { name: "D5-3" }),
+(:Division { name: "D7-5" }),
+(:Division { name: "D6-3" }),
+(:Division { name: "D3-1" }),
+(:Division { name: "D1-3" }),
+(:Division { name: "D6-4" }),
+(:Division { name: "D2-2" }),
+(:Division { name: "D6-0" }),
+(:Division { name: "D6-5" })
+
+
+MATCH (a0:Division { name: "D4-3" }), (b0:Department { name: "D4" }) 
+CREATE (a0)-[:UNDER]->(b0)
+MATCH (a1:Division { name: "D7-4" }), (b1:Department { name: "D7" }) 
+CREATE (a1)-[:UNDER]->(b1)
+MATCH (a2:Division { name: "D7-1" }), (b2:Department { name: "D7" }) 
+CREATE (a2)-[:UNDER]->(b2)
+MATCH (a3:Division { name: "D3-3" }), (b3:Department { name: "D3" }) 
+CREATE (a3)-[:UNDER]->(b3)
+MATCH (a4:Division { name: "D5-2" }), (b4:Department { name: "D5" }) 
+CREATE (a4)-[:UNDER]->(b4)
+MATCH (a5:Division { name: "D5-0" }), (b5:Department { name: "D5" }) 
+CREATE (a5)-[:UNDER]->(b5)
+MATCH (a6:Division { name: "D4-1" }), (b6:Department { name: "D4" }) 
+CREATE (a6)-[:UNDER]->(b6)
+MATCH (a7:Division { name: "D4-0" }), (b7:Department { name: "D4" }) 
+CREATE (a7)-[:UNDER]->(b7)
+MATCH (a8:Division { name: "D3-5" }), (b8:Department { name: "D3" }) 
+CREATE (a8)-[:UNDER]->(b8)
+MATCH (a9:Division { name: "D3-2" }), (b9:Department { name: "D3" }) 
+CREATE (a9)-[:UNDER]->(b9)
+MATCH (a10:Division { name: "D5-3" }), (b10:Department { name: "D5" }) 
+CREATE (a10)-[:UNDER]->(b10)
+MATCH (a11:Division { name: "D7-5" }), (b11:Department { name: "D7" }) 
+CREATE (a11)-[:UNDER]->(b11)
+MATCH (a12:Division { name: "D6-3" }), (b12:Department { name: "D6" }) 
+CREATE (a12)-[:UNDER]->(b12)
+MATCH (a13:Division { name: "D3-1" }), (b13:Department { name: "D3" }) 
+CREATE (a13)-[:UNDER]->(b13)
+MATCH (a14:Division { name: "D1-3" }), (b14:Department { name: "D1" }) 
+CREATE (a14)-[:UNDER]->(b14)
+MATCH (a15:Division { name: "D6-4" }), (b15:Department { name: "D6" }) 
+CREATE (a15)-[:UNDER]->(b15)
+MATCH (a16:Division { name: "D2-2" }), (b16:Department { name: "D2" }) 
+CREATE (a16)-[:UNDER]->(b16)
+MATCH (a17:Division { name: "D6-0" }), (b17:Department { name: "D6" }) 
+CREATE (a17)-[:UNDER]->(b17)
+MATCH (a18:Division { name: "D6-5" }), (b18:Department { name: "D6" }) 
+CREATE (a18)-[:UNDER]->(b18)

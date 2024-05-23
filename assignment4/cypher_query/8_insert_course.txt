@@ -1,0 +1,1505 @@
+CREATE CONSTRAINT ON (n:Course) ASSERT exists(n.name);
+CREATE CONSTRAINT ON (n:Course) ASSERT exists(n.code);
+CREATE CONSTRAINT ON (n:Course) ASSERT exists(n.credits);
+CREATE CONSTRAINT ON (n:Course) ASSERT exists(n.level);
+CREATE CONSTRAINT ON (n:Course) ASSERT n.code IS UNIQUE;
+CREATE (:Course { name: "C-1", code: "1001", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-2", code: "1002", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-3", code: "1003", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-4", code: "1004", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-5", code: "1005", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-6", code: "1006", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-7", code: "1007", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-8", code: "1008", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-9", code: "1009", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-10", code: "1010", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-11", code: "1011", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-12", code: "1012", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-13", code: "1013", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-14", code: "1014", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-15", code: "1015", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-16", code: "1016", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-17", code: "1017", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-18", code: "1018", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-19", code: "1019", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-20", code: "1020", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-21", code: "1021", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-22", code: "1022", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-23", code: "1023", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-24", code: "1024", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-25", code: "1025", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-26", code: "1026", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-27", code: "1027", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-28", code: "1028", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-29", code: "1029", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-30", code: "1030", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-31", code: "1031", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-32", code: "1032", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-33", code: "1033", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-34", code: "1034", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-35", code: "1035", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-36", code: "1036", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-37", code: "1037", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-38", code: "1038", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-39", code: "1039", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-40", code: "1040", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-41", code: "1041", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-42", code: "1042", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-43", code: "1043", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-44", code: "1044", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-45", code: "1045", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-46", code: "1046", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-47", code: "1047", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-48", code: "1048", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-49", code: "1049", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-50", code: "1050", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-51", code: "1051", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-52", code: "1052", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-53", code: "1053", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-54", code: "1054", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-55", code: "1055", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-56", code: "1056", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-57", code: "1057", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-58", code: "1058", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-59", code: "1059", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-60", code: "1060", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-61", code: "1061", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-62", code: "1062", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-63", code: "1063", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-64", code: "1064", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-65", code: "1065", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-66", code: "1066", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-67", code: "1067", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-68", code: "1068", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-69", code: "1069", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-70", code: "1070", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-71", code: "1071", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-72", code: "1072", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-73", code: "1073", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-74", code: "1074", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-75", code: "1075", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-76", code: "1076", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-77", code: "1077", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-78", code: "1078", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-79", code: "1079", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-80", code: "1080", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-81", code: "1081", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-82", code: "1082", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-83", code: "1083", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-84", code: "1084", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-85", code: "1085", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-86", code: "1086", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-87", code: "1087", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-88", code: "1088", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-89", code: "1089", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-90", code: "1090", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-91", code: "1091", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-92", code: "1092", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-93", code: "1093", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-94", code: "1094", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-95", code: "1095", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-96", code: "1096", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-97", code: "1097", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-98", code: "1098", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-99", code: "1099", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-100", code: "1100", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-101", code: "1101", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-102", code: "1102", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-103", code: "1103", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-104", code: "1104", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-105", code: "1105", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-106", code: "1106", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-107", code: "1107", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-108", code: "1108", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-109", code: "1109", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-110", code: "1110", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-111", code: "1111", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-112", code: "1112", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-113", code: "1113", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-114", code: "1114", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-115", code: "1115", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-116", code: "1116", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-117", code: "1117", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-118", code: "1118", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-119", code: "1119", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-120", code: "1120", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-121", code: "1121", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-122", code: "1122", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-123", code: "1123", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-124", code: "1124", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-125", code: "1125", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-126", code: "1126", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-127", code: "1127", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-128", code: "1128", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-129", code: "1129", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-130", code: "1130", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-131", code: "1131", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-132", code: "1132", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-133", code: "1133", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-134", code: "1134", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-135", code: "1135", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-136", code: "1136", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-137", code: "1137", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-138", code: "1138", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-139", code: "1139", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-140", code: "1140", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-141", code: "1141", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-142", code: "1142", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-143", code: "1143", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-144", code: "1144", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-145", code: "1145", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-146", code: "1146", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-147", code: "1147", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-148", code: "1148", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-149", code: "1149", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-150", code: "1150", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-151", code: "1151", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-152", code: "1152", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-153", code: "1153", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-154", code: "1154", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-155", code: "1155", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-156", code: "1156", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-157", code: "1157", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-158", code: "1158", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-159", code: "1159", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-160", code: "1160", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-161", code: "1161", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-162", code: "1162", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-163", code: "1163", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-164", code: "1164", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-165", code: "1165", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-166", code: "1166", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-167", code: "1167", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-168", code: "1168", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-169", code: "1169", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-170", code: "1170", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-171", code: "1171", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-172", code: "1172", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-173", code: "1173", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-174", code: "1174", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-175", code: "1175", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-176", code: "1176", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-177", code: "1177", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-178", code: "1178", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-179", code: "1179", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-180", code: "1180", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-181", code: "1181", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-182", code: "1182", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-183", code: "1183", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-184", code: "1184", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-185", code: "1185", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-186", code: "1186", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-187", code: "1187", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-188", code: "1188", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-189", code: "1189", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-190", code: "1190", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-191", code: "1191", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-192", code: "1192", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-193", code: "1193", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-194", code: "1194", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-195", code: "1195", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-196", code: "1196", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-197", code: "1197", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-198", code: "1198", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-199", code: "1199", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-200", code: "1200", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-201", code: "1201", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-202", code: "1202", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-203", code: "1203", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-204", code: "1204", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-205", code: "1205", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-206", code: "1206", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-207", code: "1207", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-208", code: "1208", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-209", code: "1209", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-210", code: "1210", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-211", code: "1211", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-212", code: "1212", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-213", code: "1213", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-214", code: "1214", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-215", code: "1215", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-216", code: "1216", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-217", code: "1217", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-218", code: "1218", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-219", code: "1219", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-220", code: "1220", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-221", code: "1221", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-222", code: "1222", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-223", code: "1223", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-224", code: "1224", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-225", code: "1225", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-226", code: "1226", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-227", code: "1227", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-228", code: "1228", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-229", code: "1229", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-230", code: "1230", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-231", code: "1231", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-232", code: "1232", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-233", code: "1233", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-234", code: "1234", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-235", code: "1235", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-236", code: "1236", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-237", code: "1237", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-238", code: "1238", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-239", code: "1239", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-240", code: "1240", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-241", code: "1241", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-242", code: "1242", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-243", code: "1243", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-244", code: "1244", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-245", code: "1245", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-246", code: "1246", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-247", code: "1247", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-248", code: "1248", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-249", code: "1249", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-250", code: "1250", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-251", code: "1251", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-252", code: "1252", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-253", code: "1253", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-254", code: "1254", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-255", code: "1255", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-256", code: "1256", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-257", code: "1257", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-258", code: "1258", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-259", code: "1259", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-260", code: "1260", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-261", code: "1261", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-262", code: "1262", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-263", code: "1263", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-264", code: "1264", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-265", code: "1265", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-266", code: "1266", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-267", code: "1267", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-268", code: "1268", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-269", code: "1269", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-270", code: "1270", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-271", code: "1271", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-272", code: "1272", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-273", code: "1273", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-274", code: "1274", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-275", code: "1275", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-276", code: "1276", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-277", code: "1277", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-278", code: "1278", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-279", code: "1279", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-280", code: "1280", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-281", code: "1281", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-282", code: "1282", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-283", code: "1283", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-284", code: "1284", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-285", code: "1285", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-286", code: "1286", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-287", code: "1287", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-288", code: "1288", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-289", code: "1289", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-290", code: "1290", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-291", code: "1291", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-292", code: "1292", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-293", code: "1293", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-294", code: "1294", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-295", code: "1295", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-296", code: "1296", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-297", code: "1297", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-298", code: "1298", credits: "7.5", level: "First Cycle" }),
+(:Course { name: "C-299", code: "1299", credits: "7.5", level: "Second Cycle" }),
+(:Course { name: "C-300", code: "1300", credits: "7.5", level: "First Cycle" })
+MATCH (c0:Course { code: "1001" }), (p0:Programme { code: "P-32" }) 
+CREATE (c0)-[:ownedBy]->(p0)
+MATCH (cc0:Course { code: "1001" }), (d0:Division { name: "D4-5" }) 
+CREATE (cc0)-[:belongsTo]->(d0)
+MATCH (c1:Course { code: "1002" }), (p1:Programme { code: "P-51" }) 
+CREATE (c1)-[:ownedBy]->(p1)
+MATCH (cc1:Course { code: "1002" }), (d1:Division { name: "D6-5" }) 
+CREATE (cc1)-[:belongsTo]->(d1)
+MATCH (c2:Course { code: "1003" }), (p2:Programme { code: "P-41" }) 
+CREATE (c2)-[:ownedBy]->(p2)
+MATCH (cc2:Course { code: "1003" }), (d2:Division { name: "D5-3" }) 
+CREATE (cc2)-[:belongsTo]->(d2)
+MATCH (c3:Course { code: "1004" }), (p3:Programme { code: "P-61" }) 
+CREATE (c3)-[:ownedBy]->(p3)
+MATCH (cc3:Course { code: "1004" }), (d3:Division { name: "D7-2" }) 
+CREATE (cc3)-[:belongsTo]->(d3)
+MATCH (c4:Course { code: "1005" }), (p4:Programme { code: "P-52" }) 
+CREATE (c4)-[:ownedBy]->(p4)
+MATCH (cc4:Course { code: "1005" }), (d4:Division { name: "D6-2" }) 
+CREATE (cc4)-[:belongsTo]->(d4)
+MATCH (c5:Course { code: "1006" }), (p5:Programme { code: "P-73" }) 
+CREATE (c5)-[:ownedBy]->(p5)
+MATCH (cc5:Course { code: "1006" }), (d5:Division { name: "D8-3" }) 
+CREATE (cc5)-[:belongsTo]->(d5)
+MATCH (c6:Course { code: "1007" }), (p6:Programme { code: "P-61" }) 
+CREATE (c6)-[:ownedBy]->(p6)
+MATCH (cc6:Course { code: "1007" }), (d6:Division { name: "D7-1" }) 
+CREATE (cc6)-[:belongsTo]->(d6)
+MATCH (c7:Course { code: "1008" }), (p7:Programme { code: "P-41" }) 
+CREATE (c7)-[:ownedBy]->(p7)
+MATCH (cc7:Course { code: "1008" }), (d7:Division { name: "D5-3" }) 
+CREATE (cc7)-[:belongsTo]->(d7)
+MATCH (c8:Course { code: "1009" }), (p8:Programme { code: "P-61" }) 
+CREATE (c8)-[:ownedBy]->(p8)
+MATCH (cc8:Course { code: "1009" }), (d8:Division { name: "D7-1" }) 
+CREATE (cc8)-[:belongsTo]->(d8)
+MATCH (c9:Course { code: "1010" }), (p9:Programme { code: "P-42" }) 
+CREATE (c9)-[:ownedBy]->(p9)
+MATCH (cc9:Course { code: "1010" }), (d9:Division { name: "D5-5" }) 
+CREATE (cc9)-[:belongsTo]->(d9)
+MATCH (c10:Course { code: "1011" }), (p10:Programme { code: "P-13" }) 
+CREATE (c10)-[:ownedBy]->(p10)
+MATCH (cc10:Course { code: "1011" }), (d10:Division { name: "D2-3" }) 
+CREATE (cc10)-[:belongsTo]->(d10)
+MATCH (c11:Course { code: "1012" }), (p11:Programme { code: "P-41" }) 
+CREATE (c11)-[:ownedBy]->(p11)
+MATCH (cc11:Course { code: "1012" }), (d11:Division { name: "D5-2" }) 
+CREATE (cc11)-[:belongsTo]->(d11)
+MATCH (c12:Course { code: "1013" }), (p12:Programme { code: "P-21" }) 
+CREATE (c12)-[:ownedBy]->(p12)
+MATCH (cc12:Course { code: "1013" }), (d12:Division { name: "D3-3" }) 
+CREATE (cc12)-[:belongsTo]->(d12)
+MATCH (c13:Course { code: "1014" }), (p13:Programme { code: "P-71" }) 
+CREATE (c13)-[:ownedBy]->(p13)
+MATCH (cc13:Course { code: "1014" }), (d13:Division { name: "D8-5" }) 
+CREATE (cc13)-[:belongsTo]->(d13)
+MATCH (c14:Course { code: "1015" }), (p14:Programme { code: "P-41" }) 
+CREATE (c14)-[:ownedBy]->(p14)
+MATCH (cc14:Course { code: "1015" }), (d14:Division { name: "D5-5" }) 
+CREATE (cc14)-[:belongsTo]->(d14)
+MATCH (c15:Course { code: "1016" }), (p15:Programme { code: "P-11" }) 
+CREATE (c15)-[:ownedBy]->(p15)
+MATCH (cc15:Course { code: "1016" }), (d15:Division { name: "D2-2" }) 
+CREATE (cc15)-[:belongsTo]->(d15)
+MATCH (c16:Course { code: "1017" }), (p16:Programme { code: "P-61" }) 
+CREATE (c16)-[:ownedBy]->(p16)
+MATCH (cc16:Course { code: "1017" }), (d16:Division { name: "D7-1" }) 
+CREATE (cc16)-[:belongsTo]->(d16)
+MATCH (c17:Course { code: "1018" }), (p17:Programme { code: "P-13" }) 
+CREATE (c17)-[:ownedBy]->(p17)
+MATCH (cc17:Course { code: "1018" }), (d17:Division { name: "D2-2" }) 
+CREATE (cc17)-[:belongsTo]->(d17)
+MATCH (c18:Course { code: "1019" }), (p18:Programme { code: "P-72" }) 
+CREATE (c18)-[:ownedBy]->(p18)
+MATCH (cc18:Course { code: "1019" }), (d18:Division { name: "D8-2" }) 
+CREATE (cc18)-[:belongsTo]->(d18)
+MATCH (c19:Course { code: "1020" }), (p19:Programme { code: "P-61" }) 
+CREATE (c19)-[:ownedBy]->(p19)
+MATCH (cc19:Course { code: "1020" }), (d19:Division { name: "D7-0" }) 
+CREATE (cc19)-[:belongsTo]->(d19)
+MATCH (c20:Course { code: "1021" }), (p20:Programme { code: "P-72" }) 
+CREATE (c20)-[:ownedBy]->(p20)
+MATCH (cc20:Course { code: "1021" }), (d20:Division { name: "D8-5" }) 
+CREATE (cc20)-[:belongsTo]->(d20)
+MATCH (c21:Course { code: "1022" }), (p21:Programme { code: "P-42" }) 
+CREATE (c21)-[:ownedBy]->(p21)
+MATCH (cc21:Course { code: "1022" }), (d21:Division { name: "D5-2" }) 
+CREATE (cc21)-[:belongsTo]->(d21)
+MATCH (c22:Course { code: "1023" }), (p22:Programme { code: "P-71" }) 
+CREATE (c22)-[:ownedBy]->(p22)
+MATCH (cc22:Course { code: "1023" }), (d22:Division { name: "D8-3" }) 
+CREATE (cc22)-[:belongsTo]->(d22)
+MATCH (c23:Course { code: "1024" }), (p23:Programme { code: "P-13" }) 
+CREATE (c23)-[:ownedBy]->(p23)
+MATCH (cc23:Course { code: "1024" }), (d23:Division { name: "D2-1" }) 
+CREATE (cc23)-[:belongsTo]->(d23)
+MATCH (c24:Course { code: "1025" }), (p24:Programme { code: "P-01" }) 
+CREATE (c24)-[:ownedBy]->(p24)
+MATCH (cc24:Course { code: "1025" }), (d24:Division { name: "D1-0" }) 
+CREATE (cc24)-[:belongsTo]->(d24)
+MATCH (c25:Course { code: "1026" }), (p25:Programme { code: "P-61" }) 
+CREATE (c25)-[:ownedBy]->(p25)
+MATCH (cc25:Course { code: "1026" }), (d25:Division { name: "D7-5" }) 
+CREATE (cc25)-[:belongsTo]->(d25)
+MATCH (c26:Course { code: "1027" }), (p26:Programme { code: "P-01" }) 
+CREATE (c26)-[:ownedBy]->(p26)
+MATCH (cc26:Course { code: "1027" }), (d26:Division { name: "D1-5" }) 
+CREATE (cc26)-[:belongsTo]->(d26)
+MATCH (c27:Course { code: "1028" }), (p27:Programme { code: "P-61" }) 
+CREATE (c27)-[:ownedBy]->(p27)
+MATCH (cc27:Course { code: "1028" }), (d27:Division { name: "D7-2" }) 
+CREATE (cc27)-[:belongsTo]->(d27)
+MATCH (c28:Course { code: "1029" }), (p28:Programme { code: "P-72" }) 
+CREATE (c28)-[:ownedBy]->(p28)
+MATCH (cc28:Course { code: "1029" }), (d28:Division { name: "D8-3" }) 
+CREATE (cc28)-[:belongsTo]->(d28)
+MATCH (c29:Course { code: "1030" }), (p29:Programme { code: "P-42" }) 
+CREATE (c29)-[:ownedBy]->(p29)
+MATCH (cc29:Course { code: "1030" }), (d29:Division { name: "D5-5" }) 
+CREATE (cc29)-[:belongsTo]->(d29)
+MATCH (c30:Course { code: "1031" }), (p30:Programme { code: "P-42" }) 
+CREATE (c30)-[:ownedBy]->(p30)
+MATCH (cc30:Course { code: "1031" }), (d30:Division { name: "D5-4" }) 
+CREATE (cc30)-[:belongsTo]->(d30)
+MATCH (c31:Course { code: "1032" }), (p31:Programme { code: "P-52" }) 
+CREATE (c31)-[:ownedBy]->(p31)
+MATCH (cc31:Course { code: "1032" }), (d31:Division { name: "D6-0" }) 
+CREATE (cc31)-[:belongsTo]->(d31)
+MATCH (c32:Course { code: "1033" }), (p32:Programme { code: "P-42" }) 
+CREATE (c32)-[:ownedBy]->(p32)
+MATCH (cc32:Course { code: "1033" }), (d32:Division { name: "D5-0" }) 
+CREATE (cc32)-[:belongsTo]->(d32)
+MATCH (c33:Course { code: "1034" }), (p33:Programme { code: "P-14" }) 
+CREATE (c33)-[:ownedBy]->(p33)
+MATCH (cc33:Course { code: "1034" }), (d33:Division { name: "D2-2" }) 
+CREATE (cc33)-[:belongsTo]->(d33)
+MATCH (c34:Course { code: "1035" }), (p34:Programme { code: "P-33" }) 
+CREATE (c34)-[:ownedBy]->(p34)
+MATCH (cc34:Course { code: "1035" }), (d34:Division { name: "D4-4" }) 
+CREATE (cc34)-[:belongsTo]->(d34)
+MATCH (c35:Course { code: "1036" }), (p35:Programme { code: "P-73" }) 
+CREATE (c35)-[:ownedBy]->(p35)
+MATCH (cc35:Course { code: "1036" }), (d35:Division { name: "D8-2" }) 
+CREATE (cc35)-[:belongsTo]->(d35)
+MATCH (c36:Course { code: "1037" }), (p36:Programme { code: "P-21" }) 
+CREATE (c36)-[:ownedBy]->(p36)
+MATCH (cc36:Course { code: "1037" }), (d36:Division { name: "D3-2" }) 
+CREATE (cc36)-[:belongsTo]->(d36)
+MATCH (c37:Course { code: "1038" }), (p37:Programme { code: "P-21" }) 
+CREATE (c37)-[:ownedBy]->(p37)
+MATCH (cc37:Course { code: "1038" }), (d37:Division { name: "D3-4" }) 
+CREATE (cc37)-[:belongsTo]->(d37)
+MATCH (c38:Course { code: "1039" }), (p38:Programme { code: "P-74" }) 
+CREATE (c38)-[:ownedBy]->(p38)
+MATCH (cc38:Course { code: "1039" }), (d38:Division { name: "D8-5" }) 
+CREATE (cc38)-[:belongsTo]->(d38)
+MATCH (c39:Course { code: "1040" }), (p39:Programme { code: "P-61" }) 
+CREATE (c39)-[:ownedBy]->(p39)
+MATCH (cc39:Course { code: "1040" }), (d39:Division { name: "D7-1" }) 
+CREATE (cc39)-[:belongsTo]->(d39)
+MATCH (c40:Course { code: "1041" }), (p40:Programme { code: "P-61" }) 
+CREATE (c40)-[:ownedBy]->(p40)
+MATCH (cc40:Course { code: "1041" }), (d40:Division { name: "D7-1" }) 
+CREATE (cc40)-[:belongsTo]->(d40)
+MATCH (c41:Course { code: "1042" }), (p41:Programme { code: "P-42" }) 
+CREATE (c41)-[:ownedBy]->(p41)
+MATCH (cc41:Course { code: "1042" }), (d41:Division { name: "D5-0" }) 
+CREATE (cc41)-[:belongsTo]->(d41)
+MATCH (c42:Course { code: "1043" }), (p42:Programme { code: "P-72" }) 
+CREATE (c42)-[:ownedBy]->(p42)
+MATCH (cc42:Course { code: "1043" }), (d42:Division { name: "D8-2" }) 
+CREATE (cc42)-[:belongsTo]->(d42)
+MATCH (c43:Course { code: "1044" }), (p43:Programme { code: "P-61" }) 
+CREATE (c43)-[:ownedBy]->(p43)
+MATCH (cc43:Course { code: "1044" }), (d43:Division { name: "D7-5" }) 
+CREATE (cc43)-[:belongsTo]->(d43)
+MATCH (c44:Course { code: "1045" }), (p44:Programme { code: "P-13" }) 
+CREATE (c44)-[:ownedBy]->(p44)
+MATCH (cc44:Course { code: "1045" }), (d44:Division { name: "D2-5" }) 
+CREATE (cc44)-[:belongsTo]->(d44)
+MATCH (c45:Course { code: "1046" }), (p45:Programme { code: "P-41" }) 
+CREATE (c45)-[:ownedBy]->(p45)
+MATCH (cc45:Course { code: "1046" }), (d45:Division { name: "D5-4" }) 
+CREATE (cc45)-[:belongsTo]->(d45)
+MATCH (c46:Course { code: "1047" }), (p46:Programme { code: "P-12" }) 
+CREATE (c46)-[:ownedBy]->(p46)
+MATCH (cc46:Course { code: "1047" }), (d46:Division { name: "D2-2" }) 
+CREATE (cc46)-[:belongsTo]->(d46)
+MATCH (c47:Course { code: "1048" }), (p47:Programme { code: "P-54" }) 
+CREATE (c47)-[:ownedBy]->(p47)
+MATCH (cc47:Course { code: "1048" }), (d47:Division { name: "D6-5" }) 
+CREATE (cc47)-[:belongsTo]->(d47)
+MATCH (c48:Course { code: "1049" }), (p48:Programme { code: "P-41" }) 
+CREATE (c48)-[:ownedBy]->(p48)
+MATCH (cc48:Course { code: "1049" }), (d48:Division { name: "D5-2" }) 
+CREATE (cc48)-[:belongsTo]->(d48)
+MATCH (c49:Course { code: "1050" }), (p49:Programme { code: "P-01" }) 
+CREATE (c49)-[:ownedBy]->(p49)
+MATCH (cc49:Course { code: "1050" }), (d49:Division { name: "D1-1" }) 
+CREATE (cc49)-[:belongsTo]->(d49)
+MATCH (c50:Course { code: "1051" }), (p50:Programme { code: "P-14" }) 
+CREATE (c50)-[:ownedBy]->(p50)
+MATCH (cc50:Course { code: "1051" }), (d50:Division { name: "D2-0" }) 
+CREATE (cc50)-[:belongsTo]->(d50)
+MATCH (c51:Course { code: "1052" }), (p51:Programme { code: "P-01" }) 
+CREATE (c51)-[:ownedBy]->(p51)
+MATCH (cc51:Course { code: "1052" }), (d51:Division { name: "D1-0" }) 
+CREATE (cc51)-[:belongsTo]->(d51)
+MATCH (c52:Course { code: "1053" }), (p52:Programme { code: "P-33" }) 
+CREATE (c52)-[:ownedBy]->(p52)
+MATCH (cc52:Course { code: "1053" }), (d52:Division { name: "D4-1" }) 
+CREATE (cc52)-[:belongsTo]->(d52)
+MATCH (c53:Course { code: "1054" }), (p53:Programme { code: "P-61" }) 
+CREATE (c53)-[:ownedBy]->(p53)
+MATCH (cc53:Course { code: "1054" }), (d53:Division { name: "D7-1" }) 
+CREATE (cc53)-[:belongsTo]->(d53)
+MATCH (c54:Course { code: "1055" }), (p54:Programme { code: "P-01" }) 
+CREATE (c54)-[:ownedBy]->(p54)
+MATCH (cc54:Course { code: "1055" }), (d54:Division { name: "D1-0" }) 
+CREATE (cc54)-[:belongsTo]->(d54)
+MATCH (c55:Course { code: "1056" }), (p55:Programme { code: "P-01" }) 
+CREATE (c55)-[:ownedBy]->(p55)
+MATCH (cc55:Course { code: "1056" }), (d55:Division { name: "D1-1" }) 
+CREATE (cc55)-[:belongsTo]->(d55)
+MATCH (c56:Course { code: "1057" }), (p56:Programme { code: "P-61" }) 
+CREATE (c56)-[:ownedBy]->(p56)
+MATCH (cc56:Course { code: "1057" }), (d56:Division { name: "D7-2" }) 
+CREATE (cc56)-[:belongsTo]->(d56)
+MATCH (c57:Course { code: "1058" }), (p57:Programme { code: "P-61" }) 
+CREATE (c57)-[:ownedBy]->(p57)
+MATCH (cc57:Course { code: "1058" }), (d57:Division { name: "D7-3" }) 
+CREATE (cc57)-[:belongsTo]->(d57)
+MATCH (c58:Course { code: "1059" }), (p58:Programme { code: "P-21" }) 
+CREATE (c58)-[:ownedBy]->(p58)
+MATCH (cc58:Course { code: "1059" }), (d58:Division { name: "D3-4" }) 
+CREATE (cc58)-[:belongsTo]->(d58)
+MATCH (c59:Course { code: "1060" }), (p59:Programme { code: "P-41" }) 
+CREATE (c59)-[:ownedBy]->(p59)
+MATCH (cc59:Course { code: "1060" }), (d59:Division { name: "D5-1" }) 
+CREATE (cc59)-[:belongsTo]->(d59)
+MATCH (c60:Course { code: "1061" }), (p60:Programme { code: "P-21" }) 
+CREATE (c60)-[:ownedBy]->(p60)
+MATCH (cc60:Course { code: "1061" }), (d60:Division { name: "D3-4" }) 
+CREATE (cc60)-[:belongsTo]->(d60)
+MATCH (c61:Course { code: "1062" }), (p61:Programme { code: "P-01" }) 
+CREATE (c61)-[:ownedBy]->(p61)
+MATCH (cc61:Course { code: "1062" }), (d61:Division { name: "D1-1" }) 
+CREATE (cc61)-[:belongsTo]->(d61)
+MATCH (c62:Course { code: "1063" }), (p62:Programme { code: "P-33" }) 
+CREATE (c62)-[:ownedBy]->(p62)
+MATCH (cc62:Course { code: "1063" }), (d62:Division { name: "D4-1" }) 
+CREATE (cc62)-[:belongsTo]->(d62)
+MATCH (c63:Course { code: "1064" }), (p63:Programme { code: "P-41" }) 
+CREATE (c63)-[:ownedBy]->(p63)
+MATCH (cc63:Course { code: "1064" }), (d63:Division { name: "D5-5" }) 
+CREATE (cc63)-[:belongsTo]->(d63)
+MATCH (c64:Course { code: "1065" }), (p64:Programme { code: "P-53" }) 
+CREATE (c64)-[:ownedBy]->(p64)
+MATCH (cc64:Course { code: "1065" }), (d64:Division { name: "D6-5" }) 
+CREATE (cc64)-[:belongsTo]->(d64)
+MATCH (c65:Course { code: "1066" }), (p65:Programme { code: "P-01" }) 
+CREATE (c65)-[:ownedBy]->(p65)
+MATCH (cc65:Course { code: "1066" }), (d65:Division { name: "D1-2" }) 
+CREATE (cc65)-[:belongsTo]->(d65)
+MATCH (c66:Course { code: "1067" }), (p66:Programme { code: "P-11" }) 
+CREATE (c66)-[:ownedBy]->(p66)
+MATCH (cc66:Course { code: "1067" }), (d66:Division { name: "D2-3" }) 
+CREATE (cc66)-[:belongsTo]->(d66)
+MATCH (c67:Course { code: "1068" }), (p67:Programme { code: "P-74" }) 
+CREATE (c67)-[:ownedBy]->(p67)
+MATCH (cc67:Course { code: "1068" }), (d67:Division { name: "D8-3" }) 
+CREATE (cc67)-[:belongsTo]->(d67)
+MATCH (c68:Course { code: "1069" }), (p68:Programme { code: "P-73" }) 
+CREATE (c68)-[:ownedBy]->(p68)
+MATCH (cc68:Course { code: "1069" }), (d68:Division { name: "D8-4" }) 
+CREATE (cc68)-[:belongsTo]->(d68)
+MATCH (c69:Course { code: "1070" }), (p69:Programme { code: "P-71" }) 
+CREATE (c69)-[:ownedBy]->(p69)
+MATCH (cc69:Course { code: "1070" }), (d69:Division { name: "D8-2" }) 
+CREATE (cc69)-[:belongsTo]->(d69)
+MATCH (c70:Course { code: "1071" }), (p70:Programme { code: "P-73" }) 
+CREATE (c70)-[:ownedBy]->(p70)
+MATCH (cc70:Course { code: "1071" }), (d70:Division { name: "D8-5" }) 
+CREATE (cc70)-[:belongsTo]->(d70)
+MATCH (c71:Course { code: "1072" }), (p71:Programme { code: "P-71" }) 
+CREATE (c71)-[:ownedBy]->(p71)
+MATCH (cc71:Course { code: "1072" }), (d71:Division { name: "D8-3" }) 
+CREATE (cc71)-[:belongsTo]->(d71)
+MATCH (c72:Course { code: "1073" }), (p72:Programme { code: "P-14" }) 
+CREATE (c72)-[:ownedBy]->(p72)
+MATCH (cc72:Course { code: "1073" }), (d72:Division { name: "D2-3" }) 
+CREATE (cc72)-[:belongsTo]->(d72)
+MATCH (c73:Course { code: "1074" }), (p73:Programme { code: "P-14" }) 
+CREATE (c73)-[:ownedBy]->(p73)
+MATCH (cc73:Course { code: "1074" }), (d73:Division { name: "D2-1" }) 
+CREATE (cc73)-[:belongsTo]->(d73)
+MATCH (c74:Course { code: "1075" }), (p74:Programme { code: "P-21" }) 
+CREATE (c74)-[:ownedBy]->(p74)
+MATCH (cc74:Course { code: "1075" }), (d74:Division { name: "D3-4" }) 
+CREATE (cc74)-[:belongsTo]->(d74)
+MATCH (c75:Course { code: "1076" }), (p75:Programme { code: "P-61" }) 
+CREATE (c75)-[:ownedBy]->(p75)
+MATCH (cc75:Course { code: "1076" }), (d75:Division { name: "D7-1" }) 
+CREATE (cc75)-[:belongsTo]->(d75)
+MATCH (c76:Course { code: "1077" }), (p76:Programme { code: "P-53" }) 
+CREATE (c76)-[:ownedBy]->(p76)
+MATCH (cc76:Course { code: "1077" }), (d76:Division { name: "D6-1" }) 
+CREATE (cc76)-[:belongsTo]->(d76)
+MATCH (c77:Course { code: "1078" }), (p77:Programme { code: "P-31" }) 
+CREATE (c77)-[:ownedBy]->(p77)
+MATCH (cc77:Course { code: "1078" }), (d77:Division { name: "D4-1" }) 
+CREATE (cc77)-[:belongsTo]->(d77)
+MATCH (c78:Course { code: "1079" }), (p78:Programme { code: "P-12" }) 
+CREATE (c78)-[:ownedBy]->(p78)
+MATCH (cc78:Course { code: "1079" }), (d78:Division { name: "D2-2" }) 
+CREATE (cc78)-[:belongsTo]->(d78)
+MATCH (c79:Course { code: "1080" }), (p79:Programme { code: "P-42" }) 
+CREATE (c79)-[:ownedBy]->(p79)
+MATCH (cc79:Course { code: "1080" }), (d79:Division { name: "D5-1" }) 
+CREATE (cc79)-[:belongsTo]->(d79)
+MATCH (c80:Course { code: "1081" }), (p80:Programme { code: "P-52" }) 
+CREATE (c80)-[:ownedBy]->(p80)
+MATCH (cc80:Course { code: "1081" }), (d80:Division { name: "D6-0" }) 
+CREATE (cc80)-[:belongsTo]->(d80)
+MATCH (c81:Course { code: "1082" }), (p81:Programme { code: "P-32" }) 
+CREATE (c81)-[:ownedBy]->(p81)
+MATCH (cc81:Course { code: "1082" }), (d81:Division { name: "D4-3" }) 
+CREATE (cc81)-[:belongsTo]->(d81)
+MATCH (c82:Course { code: "1083" }), (p82:Programme { code: "P-21" }) 
+CREATE (c82)-[:ownedBy]->(p82)
+MATCH (cc82:Course { code: "1083" }), (d82:Division { name: "D3-2" }) 
+CREATE (cc82)-[:belongsTo]->(d82)
+MATCH (c83:Course { code: "1084" }), (p83:Programme { code: "P-61" }) 
+CREATE (c83)-[:ownedBy]->(p83)
+MATCH (cc83:Course { code: "1084" }), (d83:Division { name: "D7-1" }) 
+CREATE (cc83)-[:belongsTo]->(d83)
+MATCH (c84:Course { code: "1085" }), (p84:Programme { code: "P-33" }) 
+CREATE (c84)-[:ownedBy]->(p84)
+MATCH (cc84:Course { code: "1085" }), (d84:Division { name: "D4-1" }) 
+CREATE (cc84)-[:belongsTo]->(d84)
+MATCH (c85:Course { code: "1086" }), (p85:Programme { code: "P-51" }) 
+CREATE (c85)-[:ownedBy]->(p85)
+MATCH (cc85:Course { code: "1086" }), (d85:Division { name: "D6-4" }) 
+CREATE (cc85)-[:belongsTo]->(d85)
+MATCH (c86:Course { code: "1087" }), (p86:Programme { code: "P-32" }) 
+CREATE (c86)-[:ownedBy]->(p86)
+MATCH (cc86:Course { code: "1087" }), (d86:Division { name: "D4-1" }) 
+CREATE (cc86)-[:belongsTo]->(d86)
+MATCH (c87:Course { code: "1088" }), (p87:Programme { code: "P-01" }) 
+CREATE (c87)-[:ownedBy]->(p87)
+MATCH (cc87:Course { code: "1088" }), (d87:Division { name: "D1-0" }) 
+CREATE (cc87)-[:belongsTo]->(d87)
+MATCH (c88:Course { code: "1089" }), (p88:Programme { code: "P-01" }) 
+CREATE (c88)-[:ownedBy]->(p88)
+MATCH (cc88:Course { code: "1089" }), (d88:Division { name: "D1-4" }) 
+CREATE (cc88)-[:belongsTo]->(d88)
+MATCH (c89:Course { code: "1090" }), (p89:Programme { code: "P-54" }) 
+CREATE (c89)-[:ownedBy]->(p89)
+MATCH (cc89:Course { code: "1090" }), (d89:Division { name: "D6-2" }) 
+CREATE (cc89)-[:belongsTo]->(d89)
+MATCH (c90:Course { code: "1091" }), (p90:Programme { code: "P-21" }) 
+CREATE (c90)-[:ownedBy]->(p90)
+MATCH (cc90:Course { code: "1091" }), (d90:Division { name: "D3-1" }) 
+CREATE (cc90)-[:belongsTo]->(d90)
+MATCH (c91:Course { code: "1092" }), (p91:Programme { code: "P-61" }) 
+CREATE (c91)-[:ownedBy]->(p91)
+MATCH (cc91:Course { code: "1092" }), (d91:Division { name: "D7-3" }) 
+CREATE (cc91)-[:belongsTo]->(d91)
+MATCH (c92:Course { code: "1093" }), (p92:Programme { code: "P-61" }) 
+CREATE (c92)-[:ownedBy]->(p92)
+MATCH (cc92:Course { code: "1093" }), (d92:Division { name: "D7-0" }) 
+CREATE (cc92)-[:belongsTo]->(d92)
+MATCH (c93:Course { code: "1094" }), (p93:Programme { code: "P-41" }) 
+CREATE (c93)-[:ownedBy]->(p93)
+MATCH (cc93:Course { code: "1094" }), (d93:Division { name: "D5-4" }) 
+CREATE (cc93)-[:belongsTo]->(d93)
+MATCH (c94:Course { code: "1095" }), (p94:Programme { code: "P-11" }) 
+CREATE (c94)-[:ownedBy]->(p94)
+MATCH (cc94:Course { code: "1095" }), (d94:Division { name: "D2-1" }) 
+CREATE (cc94)-[:belongsTo]->(d94)
+MATCH (c95:Course { code: "1096" }), (p95:Programme { code: "P-34" }) 
+CREATE (c95)-[:ownedBy]->(p95)
+MATCH (cc95:Course { code: "1096" }), (d95:Division { name: "D4-3" }) 
+CREATE (cc95)-[:belongsTo]->(d95)
+MATCH (c96:Course { code: "1097" }), (p96:Programme { code: "P-32" }) 
+CREATE (c96)-[:ownedBy]->(p96)
+MATCH (cc96:Course { code: "1097" }), (d96:Division { name: "D4-3" }) 
+CREATE (cc96)-[:belongsTo]->(d96)
+MATCH (c97:Course { code: "1098" }), (p97:Programme { code: "P-01" }) 
+CREATE (c97)-[:ownedBy]->(p97)
+MATCH (cc97:Course { code: "1098" }), (d97:Division { name: "D1-3" }) 
+CREATE (cc97)-[:belongsTo]->(d97)
+MATCH (c98:Course { code: "1099" }), (p98:Programme { code: "P-32" }) 
+CREATE (c98)-[:ownedBy]->(p98)
+MATCH (cc98:Course { code: "1099" }), (d98:Division { name: "D4-5" }) 
+CREATE (cc98)-[:belongsTo]->(d98)
+MATCH (c99:Course { code: "1100" }), (p99:Programme { code: "P-21" }) 
+CREATE (c99)-[:ownedBy]->(p99)
+MATCH (cc99:Course { code: "1100" }), (d99:Division { name: "D3-4" }) 
+CREATE (cc99)-[:belongsTo]->(d99)
+MATCH (c100:Course { code: "1101" }), (p100:Programme { code: "P-42" }) 
+CREATE (c100)-[:ownedBy]->(p100)
+MATCH (cc100:Course { code: "1101" }), (d100:Division { name: "D5-0" }) 
+CREATE (cc100)-[:belongsTo]->(d100)
+MATCH (c101:Course { code: "1102" }), (p101:Programme { code: "P-41" }) 
+CREATE (c101)-[:ownedBy]->(p101)
+MATCH (cc101:Course { code: "1102" }), (d101:Division { name: "D5-3" }) 
+CREATE (cc101)-[:belongsTo]->(d101)
+MATCH (c102:Course { code: "1103" }), (p102:Programme { code: "P-41" }) 
+CREATE (c102)-[:ownedBy]->(p102)
+MATCH (cc102:Course { code: "1103" }), (d102:Division { name: "D5-3" }) 
+CREATE (cc102)-[:belongsTo]->(d102)
+MATCH (c103:Course { code: "1104" }), (p103:Programme { code: "P-21" }) 
+CREATE (c103)-[:ownedBy]->(p103)
+MATCH (cc103:Course { code: "1104" }), (d103:Division { name: "D3-4" }) 
+CREATE (cc103)-[:belongsTo]->(d103)
+MATCH (c104:Course { code: "1105" }), (p104:Programme { code: "P-32" }) 
+CREATE (c104)-[:ownedBy]->(p104)
+MATCH (cc104:Course { code: "1105" }), (d104:Division { name: "D4-3" }) 
+CREATE (cc104)-[:belongsTo]->(d104)
+MATCH (c105:Course { code: "1106" }), (p105:Programme { code: "P-61" }) 
+CREATE (c105)-[:ownedBy]->(p105)
+MATCH (cc105:Course { code: "1106" }), (d105:Division { name: "D7-1" }) 
+CREATE (cc105)-[:belongsTo]->(d105)
+MATCH (c106:Course { code: "1107" }), (p106:Programme { code: "P-33" }) 
+CREATE (c106)-[:ownedBy]->(p106)
+MATCH (cc106:Course { code: "1107" }), (d106:Division { name: "D4-3" }) 
+CREATE (cc106)-[:belongsTo]->(d106)
+MATCH (c107:Course { code: "1108" }), (p107:Programme { code: "P-12" }) 
+CREATE (c107)-[:ownedBy]->(p107)
+MATCH (cc107:Course { code: "1108" }), (d107:Division { name: "D2-4" }) 
+CREATE (cc107)-[:belongsTo]->(d107)
+MATCH (c108:Course { code: "1109" }), (p108:Programme { code: "P-01" }) 
+CREATE (c108)-[:ownedBy]->(p108)
+MATCH (cc108:Course { code: "1109" }), (d108:Division { name: "D1-0" }) 
+CREATE (cc108)-[:belongsTo]->(d108)
+MATCH (c109:Course { code: "1110" }), (p109:Programme { code: "P-34" }) 
+CREATE (c109)-[:ownedBy]->(p109)
+MATCH (cc109:Course { code: "1110" }), (d109:Division { name: "D4-4" }) 
+CREATE (cc109)-[:belongsTo]->(d109)
+MATCH (c110:Course { code: "1111" }), (p110:Programme { code: "P-54" }) 
+CREATE (c110)-[:ownedBy]->(p110)
+MATCH (cc110:Course { code: "1111" }), (d110:Division { name: "D6-3" }) 
+CREATE (cc110)-[:belongsTo]->(d110)
+MATCH (c111:Course { code: "1112" }), (p111:Programme { code: "P-71" }) 
+CREATE (c111)-[:ownedBy]->(p111)
+MATCH (cc111:Course { code: "1112" }), (d111:Division { name: "D8-4" }) 
+CREATE (cc111)-[:belongsTo]->(d111)
+MATCH (c112:Course { code: "1113" }), (p112:Programme { code: "P-01" }) 
+CREATE (c112)-[:ownedBy]->(p112)
+MATCH (cc112:Course { code: "1113" }), (d112:Division { name: "D1-3" }) 
+CREATE (cc112)-[:belongsTo]->(d112)
+MATCH (c113:Course { code: "1114" }), (p113:Programme { code: "P-51" }) 
+CREATE (c113)-[:ownedBy]->(p113)
+MATCH (cc113:Course { code: "1114" }), (d113:Division { name: "D6-5" }) 
+CREATE (cc113)-[:belongsTo]->(d113)
+MATCH (c114:Course { code: "1115" }), (p114:Programme { code: "P-21" }) 
+CREATE (c114)-[:ownedBy]->(p114)
+MATCH (cc114:Course { code: "1115" }), (d114:Division { name: "D3-2" }) 
+CREATE (cc114)-[:belongsTo]->(d114)
+MATCH (c115:Course { code: "1116" }), (p115:Programme { code: "P-52" }) 
+CREATE (c115)-[:ownedBy]->(p115)
+MATCH (cc115:Course { code: "1116" }), (d115:Division { name: "D6-1" }) 
+CREATE (cc115)-[:belongsTo]->(d115)
+MATCH (c116:Course { code: "1117" }), (p116:Programme { code: "P-72" }) 
+CREATE (c116)-[:ownedBy]->(p116)
+MATCH (cc116:Course { code: "1117" }), (d116:Division { name: "D8-0" }) 
+CREATE (cc116)-[:belongsTo]->(d116)
+MATCH (c117:Course { code: "1118" }), (p117:Programme { code: "P-42" }) 
+CREATE (c117)-[:ownedBy]->(p117)
+MATCH (cc117:Course { code: "1118" }), (d117:Division { name: "D5-3" }) 
+CREATE (cc117)-[:belongsTo]->(d117)
+MATCH (c118:Course { code: "1119" }), (p118:Programme { code: "P-21" }) 
+CREATE (c118)-[:ownedBy]->(p118)
+MATCH (cc118:Course { code: "1119" }), (d118:Division { name: "D3-4" }) 
+CREATE (cc118)-[:belongsTo]->(d118)
+MATCH (c119:Course { code: "1120" }), (p119:Programme { code: "P-21" }) 
+CREATE (c119)-[:ownedBy]->(p119)
+MATCH (cc119:Course { code: "1120" }), (d119:Division { name: "D3-0" }) 
+CREATE (cc119)-[:belongsTo]->(d119)
+MATCH (c120:Course { code: "1121" }), (p120:Programme { code: "P-32" }) 
+CREATE (c120)-[:ownedBy]->(p120)
+MATCH (cc120:Course { code: "1121" }), (d120:Division { name: "D4-4" }) 
+CREATE (cc120)-[:belongsTo]->(d120)
+MATCH (c121:Course { code: "1122" }), (p121:Programme { code: "P-21" }) 
+CREATE (c121)-[:ownedBy]->(p121)
+MATCH (cc121:Course { code: "1122" }), (d121:Division { name: "D3-2" }) 
+CREATE (cc121)-[:belongsTo]->(d121)
+MATCH (c122:Course { code: "1123" }), (p122:Programme { code: "P-11" }) 
+CREATE (c122)-[:ownedBy]->(p122)
+MATCH (cc122:Course { code: "1123" }), (d122:Division { name: "D2-1" }) 
+CREATE (cc122)-[:belongsTo]->(d122)
+MATCH (c123:Course { code: "1124" }), (p123:Programme { code: "P-73" }) 
+CREATE (c123)-[:ownedBy]->(p123)
+MATCH (cc123:Course { code: "1124" }), (d123:Division { name: "D8-2" }) 
+CREATE (cc123)-[:belongsTo]->(d123)
+MATCH (c124:Course { code: "1125" }), (p124:Programme { code: "P-42" }) 
+CREATE (c124)-[:ownedBy]->(p124)
+MATCH (cc124:Course { code: "1125" }), (d124:Division { name: "D5-3" }) 
+CREATE (cc124)-[:belongsTo]->(d124)
+MATCH (c125:Course { code: "1126" }), (p125:Programme { code: "P-32" }) 
+CREATE (c125)-[:ownedBy]->(p125)
+MATCH (cc125:Course { code: "1126" }), (d125:Division { name: "D4-2" }) 
+CREATE (cc125)-[:belongsTo]->(d125)
+MATCH (c126:Course { code: "1127" }), (p126:Programme { code: "P-41" }) 
+CREATE (c126)-[:ownedBy]->(p126)
+MATCH (cc126:Course { code: "1127" }), (d126:Division { name: "D5-1" }) 
+CREATE (cc126)-[:belongsTo]->(d126)
+MATCH (c127:Course { code: "1128" }), (p127:Programme { code: "P-31" }) 
+CREATE (c127)-[:ownedBy]->(p127)
+MATCH (cc127:Course { code: "1128" }), (d127:Division { name: "D4-1" }) 
+CREATE (cc127)-[:belongsTo]->(d127)
+MATCH (c128:Course { code: "1129" }), (p128:Programme { code: "P-41" }) 
+CREATE (c128)-[:ownedBy]->(p128)
+MATCH (cc128:Course { code: "1129" }), (d128:Division { name: "D5-2" }) 
+CREATE (cc128)-[:belongsTo]->(d128)
+MATCH (c129:Course { code: "1130" }), (p129:Programme { code: "P-74" }) 
+CREATE (c129)-[:ownedBy]->(p129)
+MATCH (cc129:Course { code: "1130" }), (d129:Division { name: "D8-5" }) 
+CREATE (cc129)-[:belongsTo]->(d129)
+MATCH (c130:Course { code: "1131" }), (p130:Programme { code: "P-74" }) 
+CREATE (c130)-[:ownedBy]->(p130)
+MATCH (cc130:Course { code: "1131" }), (d130:Division { name: "D8-3" }) 
+CREATE (cc130)-[:belongsTo]->(d130)
+MATCH (c131:Course { code: "1132" }), (p131:Programme { code: "P-01" }) 
+CREATE (c131)-[:ownedBy]->(p131)
+MATCH (cc131:Course { code: "1132" }), (d131:Division { name: "D1-1" }) 
+CREATE (cc131)-[:belongsTo]->(d131)
+MATCH (c132:Course { code: "1133" }), (p132:Programme { code: "P-71" }) 
+CREATE (c132)-[:ownedBy]->(p132)
+MATCH (cc132:Course { code: "1133" }), (d132:Division { name: "D8-1" }) 
+CREATE (cc132)-[:belongsTo]->(d132)
+MATCH (c133:Course { code: "1134" }), (p133:Programme { code: "P-51" }) 
+CREATE (c133)-[:ownedBy]->(p133)
+MATCH (cc133:Course { code: "1134" }), (d133:Division { name: "D6-1" }) 
+CREATE (cc133)-[:belongsTo]->(d133)
+MATCH (c134:Course { code: "1135" }), (p134:Programme { code: "P-51" }) 
+CREATE (c134)-[:ownedBy]->(p134)
+MATCH (cc134:Course { code: "1135" }), (d134:Division { name: "D6-2" }) 
+CREATE (cc134)-[:belongsTo]->(d134)
+MATCH (c135:Course { code: "1136" }), (p135:Programme { code: "P-14" }) 
+CREATE (c135)-[:ownedBy]->(p135)
+MATCH (cc135:Course { code: "1136" }), (d135:Division { name: "D2-5" }) 
+CREATE (cc135)-[:belongsTo]->(d135)
+MATCH (c136:Course { code: "1137" }), (p136:Programme { code: "P-01" }) 
+CREATE (c136)-[:ownedBy]->(p136)
+MATCH (cc136:Course { code: "1137" }), (d136:Division { name: "D1-2" }) 
+CREATE (cc136)-[:belongsTo]->(d136)
+MATCH (c137:Course { code: "1138" }), (p137:Programme { code: "P-51" }) 
+CREATE (c137)-[:ownedBy]->(p137)
+MATCH (cc137:Course { code: "1138" }), (d137:Division { name: "D6-4" }) 
+CREATE (cc137)-[:belongsTo]->(d137)
+MATCH (c138:Course { code: "1139" }), (p138:Programme { code: "P-61" }) 
+CREATE (c138)-[:ownedBy]->(p138)
+MATCH (cc138:Course { code: "1139" }), (d138:Division { name: "D7-4" }) 
+CREATE (cc138)-[:belongsTo]->(d138)
+MATCH (c139:Course { code: "1140" }), (p139:Programme { code: "P-54" }) 
+CREATE (c139)-[:ownedBy]->(p139)
+MATCH (cc139:Course { code: "1140" }), (d139:Division { name: "D6-0" }) 
+CREATE (cc139)-[:belongsTo]->(d139)
+MATCH (c140:Course { code: "1141" }), (p140:Programme { code: "P-51" }) 
+CREATE (c140)-[:ownedBy]->(p140)
+MATCH (cc140:Course { code: "1141" }), (d140:Division { name: "D6-1" }) 
+CREATE (cc140)-[:belongsTo]->(d140)
+MATCH (c141:Course { code: "1142" }), (p141:Programme { code: "P-61" }) 
+CREATE (c141)-[:ownedBy]->(p141)
+MATCH (cc141:Course { code: "1142" }), (d141:Division { name: "D7-5" }) 
+CREATE (cc141)-[:belongsTo]->(d141)
+MATCH (c142:Course { code: "1143" }), (p142:Programme { code: "P-61" }) 
+CREATE (c142)-[:ownedBy]->(p142)
+MATCH (cc142:Course { code: "1143" }), (d142:Division { name: "D7-5" }) 
+CREATE (cc142)-[:belongsTo]->(d142)
+MATCH (c143:Course { code: "1144" }), (p143:Programme { code: "P-71" }) 
+CREATE (c143)-[:ownedBy]->(p143)
+MATCH (cc143:Course { code: "1144" }), (d143:Division { name: "D8-1" }) 
+CREATE (cc143)-[:belongsTo]->(d143)
+MATCH (c144:Course { code: "1145" }), (p144:Programme { code: "P-61" }) 
+CREATE (c144)-[:ownedBy]->(p144)
+MATCH (cc144:Course { code: "1145" }), (d144:Division { name: "D7-4" }) 
+CREATE (cc144)-[:belongsTo]->(d144)
+MATCH (c145:Course { code: "1146" }), (p145:Programme { code: "P-21" }) 
+CREATE (c145)-[:ownedBy]->(p145)
+MATCH (cc145:Course { code: "1146" }), (d145:Division { name: "D3-1" }) 
+CREATE (cc145)-[:belongsTo]->(d145)
+MATCH (c146:Course { code: "1147" }), (p146:Programme { code: "P-61" }) 
+CREATE (c146)-[:ownedBy]->(p146)
+MATCH (cc146:Course { code: "1147" }), (d146:Division { name: "D7-1" }) 
+CREATE (cc146)-[:belongsTo]->(d146)
+MATCH (c147:Course { code: "1148" }), (p147:Programme { code: "P-14" }) 
+CREATE (c147)-[:ownedBy]->(p147)
+MATCH (cc147:Course { code: "1148" }), (d147:Division { name: "D2-4" }) 
+CREATE (cc147)-[:belongsTo]->(d147)
+MATCH (c148:Course { code: "1149" }), (p148:Programme { code: "P-01" }) 
+CREATE (c148)-[:ownedBy]->(p148)
+MATCH (cc148:Course { code: "1149" }), (d148:Division { name: "D1-3" }) 
+CREATE (cc148)-[:belongsTo]->(d148)
+MATCH (c149:Course { code: "1150" }), (p149:Programme { code: "P-42" }) 
+CREATE (c149)-[:ownedBy]->(p149)
+MATCH (cc149:Course { code: "1150" }), (d149:Division { name: "D5-5" }) 
+CREATE (cc149)-[:belongsTo]->(d149)
+MATCH (c150:Course { code: "1151" }), (p150:Programme { code: "P-41" }) 
+CREATE (c150)-[:ownedBy]->(p150)
+MATCH (cc150:Course { code: "1151" }), (d150:Division { name: "D5-0" }) 
+CREATE (cc150)-[:belongsTo]->(d150)
+MATCH (c151:Course { code: "1152" }), (p151:Programme { code: "P-32" }) 
+CREATE (c151)-[:ownedBy]->(p151)
+MATCH (cc151:Course { code: "1152" }), (d151:Division { name: "D4-0" }) 
+CREATE (cc151)-[:belongsTo]->(d151)
+MATCH (c152:Course { code: "1153" }), (p152:Programme { code: "P-21" }) 
+CREATE (c152)-[:ownedBy]->(p152)
+MATCH (cc152:Course { code: "1153" }), (d152:Division { name: "D3-5" }) 
+CREATE (cc152)-[:belongsTo]->(d152)
+MATCH (c153:Course { code: "1154" }), (p153:Programme { code: "P-21" }) 
+CREATE (c153)-[:ownedBy]->(p153)
+MATCH (cc153:Course { code: "1154" }), (d153:Division { name: "D3-2" }) 
+CREATE (cc153)-[:belongsTo]->(d153)
+MATCH (c154:Course { code: "1155" }), (p154:Programme { code: "P-13" }) 
+CREATE (c154)-[:ownedBy]->(p154)
+MATCH (cc154:Course { code: "1155" }), (d154:Division { name: "D2-2" }) 
+CREATE (cc154)-[:belongsTo]->(d154)
+MATCH (c155:Course { code: "1156" }), (p155:Programme { code: "P-61" }) 
+CREATE (c155)-[:ownedBy]->(p155)
+MATCH (cc155:Course { code: "1156" }), (d155:Division { name: "D7-3" }) 
+CREATE (cc155)-[:belongsTo]->(d155)
+MATCH (c156:Course { code: "1157" }), (p156:Programme { code: "P-21" }) 
+CREATE (c156)-[:ownedBy]->(p156)
+MATCH (cc156:Course { code: "1157" }), (d156:Division { name: "D3-2" }) 
+CREATE (cc156)-[:belongsTo]->(d156)
+MATCH (c157:Course { code: "1158" }), (p157:Programme { code: "P-12" }) 
+CREATE (c157)-[:ownedBy]->(p157)
+MATCH (cc157:Course { code: "1158" }), (d157:Division { name: "D2-3" }) 
+CREATE (cc157)-[:belongsTo]->(d157)
+MATCH (c158:Course { code: "1159" }), (p158:Programme { code: "P-34" }) 
+CREATE (c158)-[:ownedBy]->(p158)
+MATCH (cc158:Course { code: "1159" }), (d158:Division { name: "D4-0" }) 
+CREATE (cc158)-[:belongsTo]->(d158)
+MATCH (c159:Course { code: "1160" }), (p159:Programme { code: "P-33" }) 
+CREATE (c159)-[:ownedBy]->(p159)
+MATCH (cc159:Course { code: "1160" }), (d159:Division { name: "D4-1" }) 
+CREATE (cc159)-[:belongsTo]->(d159)
+MATCH (c160:Course { code: "1161" }), (p160:Programme { code: "P-71" }) 
+CREATE (c160)-[:ownedBy]->(p160)
+MATCH (cc160:Course { code: "1161" }), (d160:Division { name: "D8-1" }) 
+CREATE (cc160)-[:belongsTo]->(d160)
+MATCH (c161:Course { code: "1162" }), (p161:Programme { code: "P-41" }) 
+CREATE (c161)-[:ownedBy]->(p161)
+MATCH (cc161:Course { code: "1162" }), (d161:Division { name: "D5-0" }) 
+CREATE (cc161)-[:belongsTo]->(d161)
+MATCH (c162:Course { code: "1163" }), (p162:Programme { code: "P-51" }) 
+CREATE (c162)-[:ownedBy]->(p162)
+MATCH (cc162:Course { code: "1163" }), (d162:Division { name: "D6-2" }) 
+CREATE (cc162)-[:belongsTo]->(d162)
+MATCH (c163:Course { code: "1164" }), (p163:Programme { code: "P-61" }) 
+CREATE (c163)-[:ownedBy]->(p163)
+MATCH (cc163:Course { code: "1164" }), (d163:Division { name: "D7-3" }) 
+CREATE (cc163)-[:belongsTo]->(d163)
+MATCH (c164:Course { code: "1165" }), (p164:Programme { code: "P-11" }) 
+CREATE (c164)-[:ownedBy]->(p164)
+MATCH (cc164:Course { code: "1165" }), (d164:Division { name: "D2-0" }) 
+CREATE (cc164)-[:belongsTo]->(d164)
+MATCH (c165:Course { code: "1166" }), (p165:Programme { code: "P-42" }) 
+CREATE (c165)-[:ownedBy]->(p165)
+MATCH (cc165:Course { code: "1166" }), (d165:Division { name: "D5-0" }) 
+CREATE (cc165)-[:belongsTo]->(d165)
+MATCH (c166:Course { code: "1167" }), (p166:Programme { code: "P-11" }) 
+CREATE (c166)-[:ownedBy]->(p166)
+MATCH (cc166:Course { code: "1167" }), (d166:Division { name: "D2-5" }) 
+CREATE (cc166)-[:belongsTo]->(d166)
+MATCH (c167:Course { code: "1168" }), (p167:Programme { code: "P-74" }) 
+CREATE (c167)-[:ownedBy]->(p167)
+MATCH (cc167:Course { code: "1168" }), (d167:Division { name: "D8-1" }) 
+CREATE (cc167)-[:belongsTo]->(d167)
+MATCH (c168:Course { code: "1169" }), (p168:Programme { code: "P-74" }) 
+CREATE (c168)-[:ownedBy]->(p168)
+MATCH (cc168:Course { code: "1169" }), (d168:Division { name: "D8-3" }) 
+CREATE (cc168)-[:belongsTo]->(d168)
+MATCH (c169:Course { code: "1170" }), (p169:Programme { code: "P-71" }) 
+CREATE (c169)-[:ownedBy]->(p169)
+MATCH (cc169:Course { code: "1170" }), (d169:Division { name: "D8-1" }) 
+CREATE (cc169)-[:belongsTo]->(d169)
+MATCH (c170:Course { code: "1171" }), (p170:Programme { code: "P-01" }) 
+CREATE (c170)-[:ownedBy]->(p170)
+MATCH (cc170:Course { code: "1171" }), (d170:Division { name: "D1-5" }) 
+CREATE (cc170)-[:belongsTo]->(d170)
+MATCH (c171:Course { code: "1172" }), (p171:Programme { code: "P-21" }) 
+CREATE (c171)-[:ownedBy]->(p171)
+MATCH (cc171:Course { code: "1172" }), (d171:Division { name: "D3-2" }) 
+CREATE (cc171)-[:belongsTo]->(d171)
+MATCH (c172:Course { code: "1173" }), (p172:Programme { code: "P-72" }) 
+CREATE (c172)-[:ownedBy]->(p172)
+MATCH (cc172:Course { code: "1173" }), (d172:Division { name: "D8-3" }) 
+CREATE (cc172)-[:belongsTo]->(d172)
+MATCH (c173:Course { code: "1174" }), (p173:Programme { code: "P-34" }) 
+CREATE (c173)-[:ownedBy]->(p173)
+MATCH (cc173:Course { code: "1174" }), (d173:Division { name: "D4-3" }) 
+CREATE (cc173)-[:belongsTo]->(d173)
+MATCH (c174:Course { code: "1175" }), (p174:Programme { code: "P-41" }) 
+CREATE (c174)-[:ownedBy]->(p174)
+MATCH (cc174:Course { code: "1175" }), (d174:Division { name: "D5-4" }) 
+CREATE (cc174)-[:belongsTo]->(d174)
+MATCH (c175:Course { code: "1176" }), (p175:Programme { code: "P-52" }) 
+CREATE (c175)-[:ownedBy]->(p175)
+MATCH (cc175:Course { code: "1176" }), (d175:Division { name: "D6-3" }) 
+CREATE (cc175)-[:belongsTo]->(d175)
+MATCH (c176:Course { code: "1177" }), (p176:Programme { code: "P-21" }) 
+CREATE (c176)-[:ownedBy]->(p176)
+MATCH (cc176:Course { code: "1177" }), (d176:Division { name: "D3-4" }) 
+CREATE (cc176)-[:belongsTo]->(d176)
+MATCH (c177:Course { code: "1178" }), (p177:Programme { code: "P-13" }) 
+CREATE (c177)-[:ownedBy]->(p177)
+MATCH (cc177:Course { code: "1178" }), (d177:Division { name: "D2-2" }) 
+CREATE (cc177)-[:belongsTo]->(d177)
+MATCH (c178:Course { code: "1179" }), (p178:Programme { code: "P-12" }) 
+CREATE (c178)-[:ownedBy]->(p178)
+MATCH (cc178:Course { code: "1179" }), (d178:Division { name: "D2-5" }) 
+CREATE (cc178)-[:belongsTo]->(d178)
+MATCH (c179:Course { code: "1180" }), (p179:Programme { code: "P-11" }) 
+CREATE (c179)-[:ownedBy]->(p179)
+MATCH (cc179:Course { code: "1180" }), (d179:Division { name: "D2-0" }) 
+CREATE (cc179)-[:belongsTo]->(d179)
+MATCH (c180:Course { code: "1181" }), (p180:Programme { code: "P-61" }) 
+CREATE (c180)-[:ownedBy]->(p180)
+MATCH (cc180:Course { code: "1181" }), (d180:Division { name: "D7-0" }) 
+CREATE (cc180)-[:belongsTo]->(d180)
+MATCH (c181:Course { code: "1182" }), (p181:Programme { code: "P-01" }) 
+CREATE (c181)-[:ownedBy]->(p181)
+MATCH (cc181:Course { code: "1182" }), (d181:Division { name: "D1-3" }) 
+CREATE (cc181)-[:belongsTo]->(d181)
+MATCH (c182:Course { code: "1183" }), (p182:Programme { code: "P-72" }) 
+CREATE (c182)-[:ownedBy]->(p182)
+MATCH (cc182:Course { code: "1183" }), (d182:Division { name: "D8-4" }) 
+CREATE (cc182)-[:belongsTo]->(d182)
+MATCH (c183:Course { code: "1184" }), (p183:Programme { code: "P-42" }) 
+CREATE (c183)-[:ownedBy]->(p183)
+MATCH (cc183:Course { code: "1184" }), (d183:Division { name: "D5-5" }) 
+CREATE (cc183)-[:belongsTo]->(d183)
+MATCH (c184:Course { code: "1185" }), (p184:Programme { code: "P-71" }) 
+CREATE (c184)-[:ownedBy]->(p184)
+MATCH (cc184:Course { code: "1185" }), (d184:Division { name: "D8-3" }) 
+CREATE (cc184)-[:belongsTo]->(d184)
+MATCH (c185:Course { code: "1186" }), (p185:Programme { code: "P-32" }) 
+CREATE (c185)-[:ownedBy]->(p185)
+MATCH (cc185:Course { code: "1186" }), (d185:Division { name: "D4-3" }) 
+CREATE (cc185)-[:belongsTo]->(d185)
+MATCH (c186:Course { code: "1187" }), (p186:Programme { code: "P-11" }) 
+CREATE (c186)-[:ownedBy]->(p186)
+MATCH (cc186:Course { code: "1187" }), (d186:Division { name: "D2-1" }) 
+CREATE (cc186)-[:belongsTo]->(d186)
+MATCH (c187:Course { code: "1188" }), (p187:Programme { code: "P-61" }) 
+CREATE (c187)-[:ownedBy]->(p187)
+MATCH (cc187:Course { code: "1188" }), (d187:Division { name: "D7-5" }) 
+CREATE (cc187)-[:belongsTo]->(d187)
+MATCH (c188:Course { code: "1189" }), (p188:Programme { code: "P-51" }) 
+CREATE (c188)-[:ownedBy]->(p188)
+MATCH (cc188:Course { code: "1189" }), (d188:Division { name: "D6-4" }) 
+CREATE (cc188)-[:belongsTo]->(d188)
+MATCH (c189:Course { code: "1190" }), (p189:Programme { code: "P-74" }) 
+CREATE (c189)-[:ownedBy]->(p189)
+MATCH (cc189:Course { code: "1190" }), (d189:Division { name: "D8-0" }) 
+CREATE (cc189)-[:belongsTo]->(d189)
+MATCH (c190:Course { code: "1191" }), (p190:Programme { code: "P-42" }) 
+CREATE (c190)-[:ownedBy]->(p190)
+MATCH (cc190:Course { code: "1191" }), (d190:Division { name: "D5-3" }) 
+CREATE (cc190)-[:belongsTo]->(d190)
+MATCH (c191:Course { code: "1192" }), (p191:Programme { code: "P-21" }) 
+CREATE (c191)-[:ownedBy]->(p191)
+MATCH (cc191:Course { code: "1192" }), (d191:Division { name: "D3-3" }) 
+CREATE (cc191)-[:belongsTo]->(d191)
+MATCH (c192:Course { code: "1193" }), (p192:Programme { code: "P-34" }) 
+CREATE (c192)-[:ownedBy]->(p192)
+MATCH (cc192:Course { code: "1193" }), (d192:Division { name: "D4-0" }) 
+CREATE (cc192)-[:belongsTo]->(d192)
+MATCH (c193:Course { code: "1194" }), (p193:Programme { code: "P-41" }) 
+CREATE (c193)-[:ownedBy]->(p193)
+MATCH (cc193:Course { code: "1194" }), (d193:Division { name: "D5-2" }) 
+CREATE (cc193)-[:belongsTo]->(d193)
+MATCH (c194:Course { code: "1195" }), (p194:Programme { code: "P-21" }) 
+CREATE (c194)-[:ownedBy]->(p194)
+MATCH (cc194:Course { code: "1195" }), (d194:Division { name: "D3-4" }) 
+CREATE (cc194)-[:belongsTo]->(d194)
+MATCH (c195:Course { code: "1196" }), (p195:Programme { code: "P-41" }) 
+CREATE (c195)-[:ownedBy]->(p195)
+MATCH (cc195:Course { code: "1196" }), (d195:Division { name: "D5-2" }) 
+CREATE (cc195)-[:belongsTo]->(d195)
+MATCH (c196:Course { code: "1197" }), (p196:Programme { code: "P-52" }) 
+CREATE (c196)-[:ownedBy]->(p196)
+MATCH (cc196:Course { code: "1197" }), (d196:Division { name: "D6-1" }) 
+CREATE (cc196)-[:belongsTo]->(d196)
+MATCH (c197:Course { code: "1198" }), (p197:Programme { code: "P-21" }) 
+CREATE (c197)-[:ownedBy]->(p197)
+MATCH (cc197:Course { code: "1198" }), (d197:Division { name: "D3-0" }) 
+CREATE (cc197)-[:belongsTo]->(d197)
+MATCH (c198:Course { code: "1199" }), (p198:Programme { code: "P-61" }) 
+CREATE (c198)-[:ownedBy]->(p198)
+MATCH (cc198:Course { code: "1199" }), (d198:Division { name: "D7-1" }) 
+CREATE (cc198)-[:belongsTo]->(d198)
+MATCH (c199:Course { code: "1200" }), (p199:Programme { code: "P-12" }) 
+CREATE (c199)-[:ownedBy]->(p199)
+MATCH (cc199:Course { code: "1200" }), (d199:Division { name: "D2-1" }) 
+CREATE (cc199)-[:belongsTo]->(d199)
+MATCH (c200:Course { code: "1201" }), (p200:Programme { code: "P-52" }) 
+CREATE (c200)-[:ownedBy]->(p200)
+MATCH (cc200:Course { code: "1201" }), (d200:Division { name: "D6-1" }) 
+CREATE (cc200)-[:belongsTo]->(d200)
+MATCH (c201:Course { code: "1202" }), (p201:Programme { code: "P-61" }) 
+CREATE (c201)-[:ownedBy]->(p201)
+MATCH (cc201:Course { code: "1202" }), (d201:Division { name: "D7-2" }) 
+CREATE (cc201)-[:belongsTo]->(d201)
+MATCH (c202:Course { code: "1203" }), (p202:Programme { code: "P-32" }) 
+CREATE (c202)-[:ownedBy]->(p202)
+MATCH (cc202:Course { code: "1203" }), (d202:Division { name: "D4-3" }) 
+CREATE (cc202)-[:belongsTo]->(d202)
+MATCH (c203:Course { code: "1204" }), (p203:Programme { code: "P-01" }) 
+CREATE (c203)-[:ownedBy]->(p203)
+MATCH (cc203:Course { code: "1204" }), (d203:Division { name: "D1-4" }) 
+CREATE (cc203)-[:belongsTo]->(d203)
+MATCH (c204:Course { code: "1205" }), (p204:Programme { code: "P-42" }) 
+CREATE (c204)-[:ownedBy]->(p204)
+MATCH (cc204:Course { code: "1205" }), (d204:Division { name: "D5-4" }) 
+CREATE (cc204)-[:belongsTo]->(d204)
+MATCH (c205:Course { code: "1206" }), (p205:Programme { code: "P-51" }) 
+CREATE (c205)-[:ownedBy]->(p205)
+MATCH (cc205:Course { code: "1206" }), (d205:Division { name: "D6-1" }) 
+CREATE (cc205)-[:belongsTo]->(d205)
+MATCH (c206:Course { code: "1207" }), (p206:Programme { code: "P-21" }) 
+CREATE (c206)-[:ownedBy]->(p206)
+MATCH (cc206:Course { code: "1207" }), (d206:Division { name: "D3-1" }) 
+CREATE (cc206)-[:belongsTo]->(d206)
+MATCH (c207:Course { code: "1208" }), (p207:Programme { code: "P-52" }) 
+CREATE (c207)-[:ownedBy]->(p207)
+MATCH (cc207:Course { code: "1208" }), (d207:Division { name: "D6-0" }) 
+CREATE (cc207)-[:belongsTo]->(d207)
+MATCH (c208:Course { code: "1209" }), (p208:Programme { code: "P-54" }) 
+CREATE (c208)-[:ownedBy]->(p208)
+MATCH (cc208:Course { code: "1209" }), (d208:Division { name: "D6-3" }) 
+CREATE (cc208)-[:belongsTo]->(d208)
+MATCH (c209:Course { code: "1210" }), (p209:Programme { code: "P-21" }) 
+CREATE (c209)-[:ownedBy]->(p209)
+MATCH (cc209:Course { code: "1210" }), (d209:Division { name: "D3-2" }) 
+CREATE (cc209)-[:belongsTo]->(d209)
+MATCH (c210:Course { code: "1211" }), (p210:Programme { code: "P-61" }) 
+CREATE (c210)-[:ownedBy]->(p210)
+MATCH (cc210:Course { code: "1211" }), (d210:Division { name: "D7-4" }) 
+CREATE (cc210)-[:belongsTo]->(d210)
+MATCH (c211:Course { code: "1212" }), (p211:Programme { code: "P-33" }) 
+CREATE (c211)-[:ownedBy]->(p211)
+MATCH (cc211:Course { code: "1212" }), (d211:Division { name: "D4-0" }) 
+CREATE (cc211)-[:belongsTo]->(d211)
+MATCH (c212:Course { code: "1213" }), (p212:Programme { code: "P-42" }) 
+CREATE (c212)-[:ownedBy]->(p212)
+MATCH (cc212:Course { code: "1213" }), (d212:Division { name: "D5-2" }) 
+CREATE (cc212)-[:belongsTo]->(d212)
+MATCH (c213:Course { code: "1214" }), (p213:Programme { code: "P-41" }) 
+CREATE (c213)-[:ownedBy]->(p213)
+MATCH (cc213:Course { code: "1214" }), (d213:Division { name: "D5-3" }) 
+CREATE (cc213)-[:belongsTo]->(d213)
+MATCH (c214:Course { code: "1215" }), (p214:Programme { code: "P-12" }) 
+CREATE (c214)-[:ownedBy]->(p214)
+MATCH (cc214:Course { code: "1215" }), (d214:Division { name: "D2-2" }) 
+CREATE (cc214)-[:belongsTo]->(d214)
+MATCH (c215:Course { code: "1216" }), (p215:Programme { code: "P-12" }) 
+CREATE (c215)-[:ownedBy]->(p215)
+MATCH (cc215:Course { code: "1216" }), (d215:Division { name: "D2-5" }) 
+CREATE (cc215)-[:belongsTo]->(d215)
+MATCH (c216:Course { code: "1217" }), (p216:Programme { code: "P-21" }) 
+CREATE (c216)-[:ownedBy]->(p216)
+MATCH (cc216:Course { code: "1217" }), (d216:Division { name: "D3-0" }) 
+CREATE (cc216)-[:belongsTo]->(d216)
+MATCH (c217:Course { code: "1218" }), (p217:Programme { code: "P-71" }) 
+CREATE (c217)-[:ownedBy]->(p217)
+MATCH (cc217:Course { code: "1218" }), (d217:Division { name: "D8-2" }) 
+CREATE (cc217)-[:belongsTo]->(d217)
+MATCH (c218:Course { code: "1219" }), (p218:Programme { code: "P-33" }) 
+CREATE (c218)-[:ownedBy]->(p218)
+MATCH (cc218:Course { code: "1219" }), (d218:Division { name: "D4-4" }) 
+CREATE (cc218)-[:belongsTo]->(d218)
+MATCH (c219:Course { code: "1220" }), (p219:Programme { code: "P-33" }) 
+CREATE (c219)-[:ownedBy]->(p219)
+MATCH (cc219:Course { code: "1220" }), (d219:Division { name: "D4-5" }) 
+CREATE (cc219)-[:belongsTo]->(d219)
+MATCH (c220:Course { code: "1221" }), (p220:Programme { code: "P-61" }) 
+CREATE (c220)-[:ownedBy]->(p220)
+MATCH (cc220:Course { code: "1221" }), (d220:Division { name: "D7-3" }) 
+CREATE (cc220)-[:belongsTo]->(d220)
+MATCH (c221:Course { code: "1222" }), (p221:Programme { code: "P-61" }) 
+CREATE (c221)-[:ownedBy]->(p221)
+MATCH (cc221:Course { code: "1222" }), (d221:Division { name: "D7-2" }) 
+CREATE (cc221)-[:belongsTo]->(d221)
+MATCH (c222:Course { code: "1223" }), (p222:Programme { code: "P-01" }) 
+CREATE (c222)-[:ownedBy]->(p222)
+MATCH (cc222:Course { code: "1223" }), (d222:Division { name: "D1-4" }) 
+CREATE (cc222)-[:belongsTo]->(d222)
+MATCH (c223:Course { code: "1224" }), (p223:Programme { code: "P-41" }) 
+CREATE (c223)-[:ownedBy]->(p223)
+MATCH (cc223:Course { code: "1224" }), (d223:Division { name: "D5-1" }) 
+CREATE (cc223)-[:belongsTo]->(d223)
+MATCH (c224:Course { code: "1225" }), (p224:Programme { code: "P-52" }) 
+CREATE (c224)-[:ownedBy]->(p224)
+MATCH (cc224:Course { code: "1225" }), (d224:Division { name: "D6-2" }) 
+CREATE (cc224)-[:belongsTo]->(d224)
+MATCH (c225:Course { code: "1226" }), (p225:Programme { code: "P-72" }) 
+CREATE (c225)-[:ownedBy]->(p225)
+MATCH (cc225:Course { code: "1226" }), (d225:Division { name: "D8-3" }) 
+CREATE (cc225)-[:belongsTo]->(d225)
+MATCH (c226:Course { code: "1227" }), (p226:Programme { code: "P-01" }) 
+CREATE (c226)-[:ownedBy]->(p226)
+MATCH (cc226:Course { code: "1227" }), (d226:Division { name: "D1-3" }) 
+CREATE (cc226)-[:belongsTo]->(d226)
+MATCH (c227:Course { code: "1228" }), (p227:Programme { code: "P-52" }) 
+CREATE (c227)-[:ownedBy]->(p227)
+MATCH (cc227:Course { code: "1228" }), (d227:Division { name: "D6-2" }) 
+CREATE (cc227)-[:belongsTo]->(d227)
+MATCH (c228:Course { code: "1229" }), (p228:Programme { code: "P-61" }) 
+CREATE (c228)-[:ownedBy]->(p228)
+MATCH (cc228:Course { code: "1229" }), (d228:Division { name: "D7-0" }) 
+CREATE (cc228)-[:belongsTo]->(d228)
+MATCH (c229:Course { code: "1230" }), (p229:Programme { code: "P-42" }) 
+CREATE (c229)-[:ownedBy]->(p229)
+MATCH (cc229:Course { code: "1230" }), (d229:Division { name: "D5-2" }) 
+CREATE (cc229)-[:belongsTo]->(d229)
+MATCH (c230:Course { code: "1231" }), (p230:Programme { code: "P-34" }) 
+CREATE (c230)-[:ownedBy]->(p230)
+MATCH (cc230:Course { code: "1231" }), (d230:Division { name: "D4-5" }) 
+CREATE (cc230)-[:belongsTo]->(d230)
+MATCH (c231:Course { code: "1232" }), (p231:Programme { code: "P-52" }) 
+CREATE (c231)-[:ownedBy]->(p231)
+MATCH (cc231:Course { code: "1232" }), (d231:Division { name: "D6-1" }) 
+CREATE (cc231)-[:belongsTo]->(d231)
+MATCH (c232:Course { code: "1233" }), (p232:Programme { code: "P-61" }) 
+CREATE (c232)-[:ownedBy]->(p232)
+MATCH (cc232:Course { code: "1233" }), (d232:Division { name: "D7-3" }) 
+CREATE (cc232)-[:belongsTo]->(d232)
+MATCH (c233:Course { code: "1234" }), (p233:Programme { code: "P-32" }) 
+CREATE (c233)-[:ownedBy]->(p233)
+MATCH (cc233:Course { code: "1234" }), (d233:Division { name: "D4-1" }) 
+CREATE (cc233)-[:belongsTo]->(d233)
+MATCH (c234:Course { code: "1235" }), (p234:Programme { code: "P-51" }) 
+CREATE (c234)-[:ownedBy]->(p234)
+MATCH (cc234:Course { code: "1235" }), (d234:Division { name: "D6-0" }) 
+CREATE (cc234)-[:belongsTo]->(d234)
+MATCH (c235:Course { code: "1236" }), (p235:Programme { code: "P-12" }) 
+CREATE (c235)-[:ownedBy]->(p235)
+MATCH (cc235:Course { code: "1236" }), (d235:Division { name: "D2-1" }) 
+CREATE (cc235)-[:belongsTo]->(d235)
+MATCH (c236:Course { code: "1237" }), (p236:Programme { code: "P-01" }) 
+CREATE (c236)-[:ownedBy]->(p236)
+MATCH (cc236:Course { code: "1237" }), (d236:Division { name: "D1-2" }) 
+CREATE (cc236)-[:belongsTo]->(d236)
+MATCH (c237:Course { code: "1238" }), (p237:Programme { code: "P-12" }) 
+CREATE (c237)-[:ownedBy]->(p237)
+MATCH (cc237:Course { code: "1238" }), (d237:Division { name: "D2-4" }) 
+CREATE (cc237)-[:belongsTo]->(d237)
+MATCH (c238:Course { code: "1239" }), (p238:Programme { code: "P-74" }) 
+CREATE (c238)-[:ownedBy]->(p238)
+MATCH (cc238:Course { code: "1239" }), (d238:Division { name: "D8-2" }) 
+CREATE (cc238)-[:belongsTo]->(d238)
+MATCH (c239:Course { code: "1240" }), (p239:Programme { code: "P-41" }) 
+CREATE (c239)-[:ownedBy]->(p239)
+MATCH (cc239:Course { code: "1240" }), (d239:Division { name: "D5-5" }) 
+CREATE (cc239)-[:belongsTo]->(d239)
+MATCH (c240:Course { code: "1241" }), (p240:Programme { code: "P-42" }) 
+CREATE (c240)-[:ownedBy]->(p240)
+MATCH (cc240:Course { code: "1241" }), (d240:Division { name: "D5-2" }) 
+CREATE (cc240)-[:belongsTo]->(d240)
+MATCH (c241:Course { code: "1242" }), (p241:Programme { code: "P-11" }) 
+CREATE (c241)-[:ownedBy]->(p241)
+MATCH (cc241:Course { code: "1242" }), (d241:Division { name: "D2-3" }) 
+CREATE (cc241)-[:belongsTo]->(d241)
+MATCH (c242:Course { code: "1243" }), (p242:Programme { code: "P-21" }) 
+CREATE (c242)-[:ownedBy]->(p242)
+MATCH (cc242:Course { code: "1243" }), (d242:Division { name: "D3-4" }) 
+CREATE (cc242)-[:belongsTo]->(d242)
+MATCH (c243:Course { code: "1244" }), (p243:Programme { code: "P-61" }) 
+CREATE (c243)-[:ownedBy]->(p243)
+MATCH (cc243:Course { code: "1244" }), (d243:Division { name: "D7-0" }) 
+CREATE (cc243)-[:belongsTo]->(d243)
+MATCH (c244:Course { code: "1245" }), (p244:Programme { code: "P-61" }) 
+CREATE (c244)-[:ownedBy]->(p244)
+MATCH (cc244:Course { code: "1245" }), (d244:Division { name: "D7-1" }) 
+CREATE (cc244)-[:belongsTo]->(d244)
+MATCH (c245:Course { code: "1246" }), (p245:Programme { code: "P-52" }) 
+CREATE (c245)-[:ownedBy]->(p245)
+MATCH (cc245:Course { code: "1246" }), (d245:Division { name: "D6-4" }) 
+CREATE (cc245)-[:belongsTo]->(d245)
+MATCH (c246:Course { code: "1247" }), (p246:Programme { code: "P-61" }) 
+CREATE (c246)-[:ownedBy]->(p246)
+MATCH (cc246:Course { code: "1247" }), (d246:Division { name: "D7-5" }) 
+CREATE (cc246)-[:belongsTo]->(d246)
+MATCH (c247:Course { code: "1248" }), (p247:Programme { code: "P-21" }) 
+CREATE (c247)-[:ownedBy]->(p247)
+MATCH (cc247:Course { code: "1248" }), (d247:Division { name: "D3-0" }) 
+CREATE (cc247)-[:belongsTo]->(d247)
+MATCH (c248:Course { code: "1249" }), (p248:Programme { code: "P-42" }) 
+CREATE (c248)-[:ownedBy]->(p248)
+MATCH (cc248:Course { code: "1249" }), (d248:Division { name: "D5-0" }) 
+CREATE (cc248)-[:belongsTo]->(d248)
+MATCH (c249:Course { code: "1250" }), (p249:Programme { code: "P-72" }) 
+CREATE (c249)-[:ownedBy]->(p249)
+MATCH (cc249:Course { code: "1250" }), (d249:Division { name: "D8-0" }) 
+CREATE (cc249)-[:belongsTo]->(d249)
+MATCH (c250:Course { code: "1251" }), (p250:Programme { code: "P-01" }) 
+CREATE (c250)-[:ownedBy]->(p250)
+MATCH (cc250:Course { code: "1251" }), (d250:Division { name: "D1-3" }) 
+CREATE (cc250)-[:belongsTo]->(d250)
+MATCH (c251:Course { code: "1252" }), (p251:Programme { code: "P-32" }) 
+CREATE (c251)-[:ownedBy]->(p251)
+MATCH (cc251:Course { code: "1252" }), (d251:Division { name: "D4-2" }) 
+CREATE (cc251)-[:belongsTo]->(d251)
+MATCH (c252:Course { code: "1253" }), (p252:Programme { code: "P-74" }) 
+CREATE (c252)-[:ownedBy]->(p252)
+MATCH (cc252:Course { code: "1253" }), (d252:Division { name: "D8-2" }) 
+CREATE (cc252)-[:belongsTo]->(d252)
+MATCH (c253:Course { code: "1254" }), (p253:Programme { code: "P-42" }) 
+CREATE (c253)-[:ownedBy]->(p253)
+MATCH (cc253:Course { code: "1254" }), (d253:Division { name: "D5-5" }) 
+CREATE (cc253)-[:belongsTo]->(d253)
+MATCH (c254:Course { code: "1255" }), (p254:Programme { code: "P-71" }) 
+CREATE (c254)-[:ownedBy]->(p254)
+MATCH (cc254:Course { code: "1255" }), (d254:Division { name: "D8-1" }) 
+CREATE (cc254)-[:belongsTo]->(d254)
+MATCH (c255:Course { code: "1256" }), (p255:Programme { code: "P-53" }) 
+CREATE (c255)-[:ownedBy]->(p255)
+MATCH (cc255:Course { code: "1256" }), (d255:Division { name: "D6-2" }) 
+CREATE (cc255)-[:belongsTo]->(d255)
+MATCH (c256:Course { code: "1257" }), (p256:Programme { code: "P-01" }) 
+CREATE (c256)-[:ownedBy]->(p256)
+MATCH (cc256:Course { code: "1257" }), (d256:Division { name: "D1-3" }) 
+CREATE (cc256)-[:belongsTo]->(d256)
+MATCH (c257:Course { code: "1258" }), (p257:Programme { code: "P-33" }) 
+CREATE (c257)-[:ownedBy]->(p257)
+MATCH (cc257:Course { code: "1258" }), (d257:Division { name: "D4-5" }) 
+CREATE (cc257)-[:belongsTo]->(d257)
+MATCH (c258:Course { code: "1259" }), (p258:Programme { code: "P-21" }) 
+CREATE (c258)-[:ownedBy]->(p258)
+MATCH (cc258:Course { code: "1259" }), (d258:Division { name: "D3-0" }) 
+CREATE (cc258)-[:belongsTo]->(d258)
+MATCH (c259:Course { code: "1260" }), (p259:Programme { code: "P-61" }) 
+CREATE (c259)-[:ownedBy]->(p259)
+MATCH (cc259:Course { code: "1260" }), (d259:Division { name: "D7-5" }) 
+CREATE (cc259)-[:belongsTo]->(d259)
+MATCH (c260:Course { code: "1261" }), (p260:Programme { code: "P-71" }) 
+CREATE (c260)-[:ownedBy]->(p260)
+MATCH (cc260:Course { code: "1261" }), (d260:Division { name: "D8-3" }) 
+CREATE (cc260)-[:belongsTo]->(d260)
+MATCH (c261:Course { code: "1262" }), (p261:Programme { code: "P-33" }) 
+CREATE (c261)-[:ownedBy]->(p261)
+MATCH (cc261:Course { code: "1262" }), (d261:Division { name: "D4-1" }) 
+CREATE (cc261)-[:belongsTo]->(d261)
+MATCH (c262:Course { code: "1263" }), (p262:Programme { code: "P-61" }) 
+CREATE (c262)-[:ownedBy]->(p262)
+MATCH (cc262:Course { code: "1263" }), (d262:Division { name: "D7-1" }) 
+CREATE (cc262)-[:belongsTo]->(d262)
+MATCH (c263:Course { code: "1264" }), (p263:Programme { code: "P-14" }) 
+CREATE (c263)-[:ownedBy]->(p263)
+MATCH (cc263:Course { code: "1264" }), (d263:Division { name: "D2-3" }) 
+CREATE (cc263)-[:belongsTo]->(d263)
+MATCH (c264:Course { code: "1265" }), (p264:Programme { code: "P-61" }) 
+CREATE (c264)-[:ownedBy]->(p264)
+MATCH (cc264:Course { code: "1265" }), (d264:Division { name: "D7-3" }) 
+CREATE (cc264)-[:belongsTo]->(d264)
+MATCH (c265:Course { code: "1266" }), (p265:Programme { code: "P-33" }) 
+CREATE (c265)-[:ownedBy]->(p265)
+MATCH (cc265:Course { code: "1266" }), (d265:Division { name: "D4-4" }) 
+CREATE (cc265)-[:belongsTo]->(d265)
+MATCH (c266:Course { code: "1267" }), (p266:Programme { code: "P-32" }) 
+CREATE (c266)-[:ownedBy]->(p266)
+MATCH (cc266:Course { code: "1267" }), (d266:Division { name: "D4-1" }) 
+CREATE (cc266)-[:belongsTo]->(d266)
+MATCH (c267:Course { code: "1268" }), (p267:Programme { code: "P-21" }) 
+CREATE (c267)-[:ownedBy]->(p267)
+MATCH (cc267:Course { code: "1268" }), (d267:Division { name: "D3-5" }) 
+CREATE (cc267)-[:belongsTo]->(d267)
+MATCH (c268:Course { code: "1269" }), (p268:Programme { code: "P-61" }) 
+CREATE (c268)-[:ownedBy]->(p268)
+MATCH (cc268:Course { code: "1269" }), (d268:Division { name: "D7-2" }) 
+CREATE (cc268)-[:belongsTo]->(d268)
+MATCH (c269:Course { code: "1270" }), (p269:Programme { code: "P-11" }) 
+CREATE (c269)-[:ownedBy]->(p269)
+MATCH (cc269:Course { code: "1270" }), (d269:Division { name: "D2-2" }) 
+CREATE (cc269)-[:belongsTo]->(d269)
+MATCH (c270:Course { code: "1271" }), (p270:Programme { code: "P-14" }) 
+CREATE (c270)-[:ownedBy]->(p270)
+MATCH (cc270:Course { code: "1271" }), (d270:Division { name: "D2-0" }) 
+CREATE (cc270)-[:belongsTo]->(d270)
+MATCH (c271:Course { code: "1272" }), (p271:Programme { code: "P-71" }) 
+CREATE (c271)-[:ownedBy]->(p271)
+MATCH (cc271:Course { code: "1272" }), (d271:Division { name: "D8-0" }) 
+CREATE (cc271)-[:belongsTo]->(d271)
+MATCH (c272:Course { code: "1273" }), (p272:Programme { code: "P-61" }) 
+CREATE (c272)-[:ownedBy]->(p272)
+MATCH (cc272:Course { code: "1273" }), (d272:Division { name: "D7-5" }) 
+CREATE (cc272)-[:belongsTo]->(d272)
+MATCH (c273:Course { code: "1274" }), (p273:Programme { code: "P-01" }) 
+CREATE (c273)-[:ownedBy]->(p273)
+MATCH (cc273:Course { code: "1274" }), (d273:Division { name: "D1-2" }) 
+CREATE (cc273)-[:belongsTo]->(d273)
+MATCH (c274:Course { code: "1275" }), (p274:Programme { code: "P-12" }) 
+CREATE (c274)-[:ownedBy]->(p274)
+MATCH (cc274:Course { code: "1275" }), (d274:Division { name: "D2-4" }) 
+CREATE (cc274)-[:belongsTo]->(d274)
+MATCH (c275:Course { code: "1276" }), (p275:Programme { code: "P-01" }) 
+CREATE (c275)-[:ownedBy]->(p275)
+MATCH (cc275:Course { code: "1276" }), (d275:Division { name: "D1-3" }) 
+CREATE (cc275)-[:belongsTo]->(d275)
+MATCH (c276:Course { code: "1277" }), (p276:Programme { code: "P-13" }) 
+CREATE (c276)-[:ownedBy]->(p276)
+MATCH (cc276:Course { code: "1277" }), (d276:Division { name: "D2-2" }) 
+CREATE (cc276)-[:belongsTo]->(d276)
+MATCH (c277:Course { code: "1278" }), (p277:Programme { code: "P-54" }) 
+CREATE (c277)-[:ownedBy]->(p277)
+MATCH (cc277:Course { code: "1278" }), (d277:Division { name: "D6-0" }) 
+CREATE (cc277)-[:belongsTo]->(d277)
+MATCH (c278:Course { code: "1279" }), (p278:Programme { code: "P-01" }) 
+CREATE (c278)-[:ownedBy]->(p278)
+MATCH (cc278:Course { code: "1279" }), (d278:Division { name: "D1-4" }) 
+CREATE (cc278)-[:belongsTo]->(d278)
+MATCH (c279:Course { code: "1280" }), (p279:Programme { code: "P-52" }) 
+CREATE (c279)-[:ownedBy]->(p279)
+MATCH (cc279:Course { code: "1280" }), (d279:Division { name: "D6-5" }) 
+CREATE (cc279)-[:belongsTo]->(d279)
+MATCH (c280:Course { code: "1281" }), (p280:Programme { code: "P-01" }) 
+CREATE (c280)-[:ownedBy]->(p280)
+MATCH (cc280:Course { code: "1281" }), (d280:Division { name: "D1-0" }) 
+CREATE (cc280)-[:belongsTo]->(d280)
+MATCH (c281:Course { code: "1282" }), (p281:Programme { code: "P-54" }) 
+CREATE (c281)-[:ownedBy]->(p281)
+MATCH (cc281:Course { code: "1282" }), (d281:Division { name: "D6-3" }) 
+CREATE (cc281)-[:belongsTo]->(d281)
+MATCH (c282:Course { code: "1283" }), (p282:Programme { code: "P-61" }) 
+CREATE (c282)-[:ownedBy]->(p282)
+MATCH (cc282:Course { code: "1283" }), (d282:Division { name: "D7-2" }) 
+CREATE (cc282)-[:belongsTo]->(d282)
+MATCH (c283:Course { code: "1284" }), (p283:Programme { code: "P-54" }) 
+CREATE (c283)-[:ownedBy]->(p283)
+MATCH (cc283:Course { code: "1284" }), (d283:Division { name: "D6-4" }) 
+CREATE (cc283)-[:belongsTo]->(d283)
+MATCH (c284:Course { code: "1285" }), (p284:Programme { code: "P-73" }) 
+CREATE (c284)-[:ownedBy]->(p284)
+MATCH (cc284:Course { code: "1285" }), (d284:Division { name: "D8-2" }) 
+CREATE (cc284)-[:belongsTo]->(d284)
+MATCH (c285:Course { code: "1286" }), (p285:Programme { code: "P-54" }) 
+CREATE (c285)-[:ownedBy]->(p285)
+MATCH (cc285:Course { code: "1286" }), (d285:Division { name: "D6-4" }) 
+CREATE (cc285)-[:belongsTo]->(d285)
+MATCH (c286:Course { code: "1287" }), (p286:Programme { code: "P-21" }) 
+CREATE (c286)-[:ownedBy]->(p286)
+MATCH (cc286:Course { code: "1287" }), (d286:Division { name: "D3-0" }) 
+CREATE (cc286)-[:belongsTo]->(d286)
+MATCH (c287:Course { code: "1288" }), (p287:Programme { code: "P-54" }) 
+CREATE (c287)-[:ownedBy]->(p287)
+MATCH (cc287:Course { code: "1288" }), (d287:Division { name: "D6-5" }) 
+CREATE (cc287)-[:belongsTo]->(d287)
+MATCH (c288:Course { code: "1289" }), (p288:Programme { code: "P-01" }) 
+CREATE (c288)-[:ownedBy]->(p288)
+MATCH (cc288:Course { code: "1289" }), (d288:Division { name: "D1-0" }) 
+CREATE (cc288)-[:belongsTo]->(d288)
+MATCH (c289:Course { code: "1290" }), (p289:Programme { code: "P-54" }) 
+CREATE (c289)-[:ownedBy]->(p289)
+MATCH (cc289:Course { code: "1290" }), (d289:Division { name: "D6-0" }) 
+CREATE (cc289)-[:belongsTo]->(d289)
+MATCH (c290:Course { code: "1291" }), (p290:Programme { code: "P-01" }) 
+CREATE (c290)-[:ownedBy]->(p290)
+MATCH (cc290:Course { code: "1291" }), (d290:Division { name: "D1-3" }) 
+CREATE (cc290)-[:belongsTo]->(d290)
+MATCH (c291:Course { code: "1292" }), (p291:Programme { code: "P-01" }) 
+CREATE (c291)-[:ownedBy]->(p291)
+MATCH (cc291:Course { code: "1292" }), (d291:Division { name: "D1-3" }) 
+CREATE (cc291)-[:belongsTo]->(d291)
+MATCH (c292:Course { code: "1293" }), (p292:Programme { code: "P-21" }) 
+CREATE (c292)-[:ownedBy]->(p292)
+MATCH (cc292:Course { code: "1293" }), (d292:Division { name: "D3-0" }) 
+CREATE (cc292)-[:belongsTo]->(d292)
+MATCH (c293:Course { code: "1294" }), (p293:Programme { code: "P-61" }) 
+CREATE (c293)-[:ownedBy]->(p293)
+MATCH (cc293:Course { code: "1294" }), (d293:Division { name: "D7-4" }) 
+CREATE (cc293)-[:belongsTo]->(d293)
+MATCH (c294:Course { code: "1295" }), (p294:Programme { code: "P-21" }) 
+CREATE (c294)-[:ownedBy]->(p294)
+MATCH (cc294:Course { code: "1295" }), (d294:Division { name: "D3-0" }) 
+CREATE (cc294)-[:belongsTo]->(d294)
+MATCH (c295:Course { code: "1296" }), (p295:Programme { code: "P-13" }) 
+CREATE (c295)-[:ownedBy]->(p295)
+MATCH (cc295:Course { code: "1296" }), (d295:Division { name: "D2-0" }) 
+CREATE (cc295)-[:belongsTo]->(d295)
+MATCH (c296:Course { code: "1297" }), (p296:Programme { code: "P-12" }) 
+CREATE (c296)-[:ownedBy]->(p296)
+MATCH (cc296:Course { code: "1297" }), (d296:Division { name: "D2-2" }) 
+CREATE (cc296)-[:belongsTo]->(d296)
+MATCH (c297:Course { code: "1298" }), (p297:Programme { code: "P-61" }) 
+CREATE (c297)-[:ownedBy]->(p297)
+MATCH (cc297:Course { code: "1298" }), (d297:Division { name: "D7-4" }) 
+CREATE (cc297)-[:belongsTo]->(d297)
+MATCH (c298:Course { code: "1299" }), (p298:Programme { code: "P-01" }) 
+CREATE (c298)-[:ownedBy]->(p298)
+MATCH (cc298:Course { code: "1299" }), (d298:Division { name: "D1-3" }) 
+CREATE (cc298)-[:belongsTo]->(d298)
+MATCH (c299:Course { code: "1300" }), (p299:Programme { code: "P-72" }) 
+CREATE (c299)-[:ownedBy]->(p299)
+MATCH (cc299:Course { code: "1300" }), (d299:Division { name: "D8-5" }) 
+CREATE (cc299)-[:belongsTo]->(d299)

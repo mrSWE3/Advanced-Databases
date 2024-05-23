@@ -27,13 +27,55 @@ class Programme:
     n = "Programme"
     name = "name"
     code = "code"
+    bellongs_to = "belongsTo"
 class PI:
     n = "ProgrammeInsatnce"
     year = "year"
     belongs_to = "belongsTo"
+    course_refereance = "courseReferance"
 class Enrollment:
     n = "Enrollment"
     graduated = "graduated"
+class Course:
+    n = "Course"
+    code = "code"
+    creditss = "credits"
+    level = "level"
+    name = "name"
+    owned_by_programme = "ownedBy"
+    belongs_to_devision = "belongsTo"
+class CI:
+    n = "CourseInstance"
+    assistantPlanningHours = "assistantPlanningHours"
+    academicYear = "academicYear"
+    capacity = "capacity"
+    id = "id"
+    studyPeriod = "studyPeriod"
+    seniorPlanningHours = "seniorPlanningHours"
+    examinedBy = "examinedBy"
+    instanceOf = "instanceOf"
+class PC:
+    n = "ProgrammeCourse"
+    type = "type"
+    studyYear = "studyYear" #1, 2, 3
+    
+
+    referenceTo = "referenceTo"
+    availableFor = "availableFor"
+
+class Registration:
+    n = "Registration"
+    course_status = "courseStatus"
+    grade = "grade"
+
+class TimeReported:
+    n = "TimeReported"
+    hours = "hours"
+
+class TimeAssigned:
+    n = "TimeAssigned"
+    hours = "hours"
+
 
 def create_label(label: str, props: List[str], uniq_props: List[str]):
     assert all([up in props for up in uniq_props])
@@ -46,6 +88,9 @@ def fill(values: List[str], label: str, props: List[str], node_name:str = ""):
     prop_list = ", ".join([f"{p}: \"{v}\"" for p,v in zip(props, values)])
     pl = f" {"{"} {prop_list} {"}"}" if len(prop_list) > 0 else ""
     return f"{node_name}:{label}{pl}"
+
+def create_singel_value(labels: List[str], props: List[str], values: List[str], node_name:str = ""):
+    return create_value(labels, props, [values], node_name)
 
 def create_value(labels: List[str], props: List[str], values: List[List[str]], node_name:str = ""):
     assert len(props) == len(values[0])
@@ -113,6 +158,9 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
                                     f"b{i}", ed.to_label, ed.to_keys, ed.to_values,
                                     relation, relation_props, ed.relation_values, multiway) for i, ed in enumerate(edge_data)])
     return relation_statments + "\n" + values_statments
+
+def create_edges_simpel(from_name: str, relation: str, to_name: str, multiway = False):
+    return f"CREATE ({from_name})-[{relation}]-{">" if not multiway else ""}({to_name})"
 
 def match_on_edge(from_name: str,to_name: str,
                  relation: str, relation_props: List[str], relation_values:List[str], 

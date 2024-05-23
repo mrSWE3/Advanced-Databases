@@ -9,7 +9,7 @@ print(create_relation(Enrollment.n, [Enrollment.graduated], []))
 
 
 
-for i, (_,student_id,programme_code,year,graduated )in list(enumerate(lines))[:1]:
+for i, (_,student_id,programme_code,year,graduated )in list(enumerate(lines)):
     pi_name = f"PI{i}"
     p_name = f"P{i}"
     s_name = f"S{i}"
