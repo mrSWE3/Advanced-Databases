@@ -1,10 +1,10 @@
-CREATE CONSTRAINT ON (n:Department) ASSERT exists(n.name);
-CREATE CONSTRAINT ON (n:Department) ASSERT n.name IS UNIQUE;
-CREATE (:Department { name: "D3" }),
-(:Department { name: "D2" }),
-(:Department { name: "D1" }),
-(:Department { name: "D7" }),
-(:Department { name: "D8" }),
-(:Department { name: "D5" }),
-(:Department { name: "D6" }),
-(:Department { name: "D4" })
+CREATE CONSTRAINT IF NOT EXISTS FOR (n:Department) REQUIRE n.name IS NOT NULL;
+CREATE CONSTRAINT IF NOT EXISTS FOR (n:Department) REQUIRE n.name IS UNIQUE;
+CREATE (:Department { name: "D8" })
+CREATE (:Department { name: "D4" })
+CREATE (:Department { name: "D6" })
+CREATE (:Department { name: "D7" })
+CREATE (:Department { name: "D5" })
+CREATE (:Department { name: "D1" })
+CREATE (:Department { name: "D2" })
+CREATE (:Department { name: "D3" })

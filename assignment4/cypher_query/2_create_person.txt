@@ -1,3 +1,0 @@
-CREATE CONSTRAINT ON (n:Person) ASSERT exists(n.id);
-CREATE CONSTRAINT ON (n:Person) ASSERT exists(n.name);
-CREATE CONSTRAINT ON (n:Person) ASSERT n.id IS UNIQUE;

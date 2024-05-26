@@ -27,14 +27,14 @@ class Programme:
     n = "Programme"
     name = "name"
     code = "code"
-    bellongs_to = "belongsTo"
+    bellongs_to = "BELONGS_TO"
 class PI:
-    n = "ProgrammeInsatnce"
+    n = "ProgrammeInstance"
     year = "year"
-    belongs_to = "belongsTo"
-    course_refereance = "courseReferance"
+    belongs_to = "BELONGS_TO"
+    course_refereance = "courseReference"
 class Enrollment:
-    n = "Enrollment"
+    n = "Enrolment"
     graduated = "graduated"
 class Course:
     n = "Course"
@@ -42,8 +42,8 @@ class Course:
     creditss = "credits"
     level = "level"
     name = "name"
-    owned_by_programme = "ownedBy"
-    belongs_to_devision = "belongsTo"
+    owned_by_programme = "OWNED_BY"
+    belongs_to_devision = "BELONGS_TO"
 class CI:
     n = "CourseInstance"
     assistantPlanningHours = "assistantPlanningHours"
@@ -60,8 +60,8 @@ class PC:
     studyYear = "studyYear" #1, 2, 3
     
 
-    referenceTo = "referenceTo"
-    availableFor = "availableFor"
+    referenceTo = "REFERENCE_TO"
+    availableFor = "AVAILABLE_FOR"
 
 class Registration:
     n = "Registration"
@@ -79,8 +79,8 @@ class TimeAssigned:
 
 def create_label(label: str, props: List[str], uniq_props: List[str]):
     assert all([up in props for up in uniq_props])
-    constraints = [f"CREATE CONSTRAINT ON (n:{label}) ASSERT exists(n.{p});" for p in props]
-    uniqs = [f"CREATE CONSTRAINT ON (n:{label}) ASSERT n.{up} IS UNIQUE;" for up in uniq_props]
+    constraints = [f"CREATE CONSTRAINT IF NOT EXISTS FOR (n:{label}) REQUIRE n.{p} IS NOT NULL;" for p in props]
+    uniqs = [f"CREATE CONSTRAINT IF NOT EXISTS FOR (n:{label}) REQUIRE n.{up} IS UNIQUE;" for up in uniq_props]
     statements = "\n".join(constraints + uniqs)
     return statements
 
@@ -95,8 +95,8 @@ def create_singel_value(labels: List[str], props: List[str], values: List[str], 
 def create_value(labels: List[str], props: List[str], values: List[List[str]], node_name:str = ""):
     assert len(props) == len(values[0])
     label = ":".join(labels)
-    value_statemnts = ",\n".join([f"({fill(vs, label, props, node_name)})" for vs in values])
-    return f"CREATE {value_statemnts}"
+    value_statemnts = "\n".join([f"CREATE ({fill(vs, label, props, node_name)})" for vs in values])
+    return f"{value_statemnts}"
 
 def create_nodes(label: str, props: List[str], uniq_props: List[str], values: List[list[str]]):
     label_stmts = create_label(label, props, uniq_props)
@@ -115,14 +115,14 @@ def create_weak_node_value(labels: List[str], props: List[str], values: List[Tup
     for i,(nid,v) in enumerate(values):
         child_name = f"child{i}"
         parent_name = f"parent{i}"
-        s += create_value(labels,props,[v],child_name) + "\n"
-        s += f"MATCH  ({fill(nid.values, nid.label, nid.keys, parent_name)}) \n" + \
-           f"CREATE ({child_name})-[:{relation}]->({parent_name})\n "
+        s += create_value(labels,props,[v],child_name) + f" WITH {child_name} "
+        s += f"MATCH ({fill(nid.values, nid.label, nid.keys, parent_name)}) " + \
+           f"CREATE ({child_name})-[:{relation}]->({parent_name})\n"
     return s
 
 def create_relation(relation: str, relation_props: List[str], uniqe_relation_props:List[str]):
-    constraints = [f"CREATE CONSTRAINT ON ()-[r:{relation}]-() ASSERT exists(r.{p});" for p in relation_props]
-    uniqs = [f"CREATE CONSTRAINT ON ()-[r:{relation}]-() ASSERT r.{up} IS UNIQUE;" for up in uniqe_relation_props]
+    constraints = [f"CREATE CONSTRAINT IF NOT EXISTS FOR ()-[r:{relation}]-() REQUIRE r.{p} IS NOT NULL;" for p in relation_props]
+    uniqs = [f"CREATE CONSTRAINT IF NOT EXISTS FOR ()-[r:{relation}]-() ASSERT r.{up} IS UNIQUE;" for up in uniqe_relation_props]
     statements = "\n".join(constraints + uniqs)
     return statements
 def create_edge(from_name: str, from_label:str, from_keys: List[str], from_values: List[str],
@@ -132,9 +132,10 @@ def create_edge(from_name: str, from_label:str, from_keys: List[str], from_value
     relation_prop_statment = fill(relation_values, relation, relation_props)
     from_dict = fill(from_values, from_label, from_keys, from_name)
     to_dict = fill(to_values, to_label, to_keys, to_name)
-    return f"MATCH ({from_dict}), ({to_dict}) " + "\n" + \
-            (extra_match + "\n" if extra_match != None else "")  + \
-           f"CREATE ({from_name})-[{relation_prop_statment}]-{">" if not multiway else ""}({to_name})"
+    return f"MATCH ({from_dict}), ({to_dict}) " + " " + \
+            (extra_match + " " if extra_match != None else "")  + \
+            f"CREATE ({from_name})-[{relation_prop_statment}]->({to_name})"
+        #    f"CREATE ({from_name})-[{relation_prop_statment}]-{">" if not multiway else ""}({to_name})"
 
 @dataclass
 class Edge_data:
@@ -160,7 +161,7 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
     return relation_statments + "\n" + values_statments
 
 def create_edges_simpel(from_name: str, relation: str, to_name: str, multiway = False):
-    return f"CREATE ({from_name})-[{relation}]-{">" if not multiway else ""}({to_name})"
+    return f"CREATE ({from_name})-[:{relation}]-{">" if not multiway else ""}({to_name})"
 
 def match_on_edge(from_name: str,to_name: str,
                  relation: str, relation_props: List[str], relation_values:List[str], 

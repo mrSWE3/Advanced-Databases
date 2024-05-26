@@ -22,10 +22,10 @@ for i, (p_code, studyYear, academicYear, course_code, type) in enumerate(lines):
     c_name = f"c{i}"
     p_name = f"p{i}"
 
-    print(create_singel_value([PC.n], props, [studyYear, type], pc_name))
-    print(match(p_name, Programme.n, [Programme.code], [p_code]))
-    print(create_edges_simpel(pc_name, PC.availableFor, p_name))
-    print(match(c_name, Course.n, [Course.code], [course_code]))
+    print(create_singel_value([PC.n], props, [studyYear, type], pc_name), end=f" WITH {pc_name} ")
+    print(match(p_name, Programme.n, [Programme.code], [p_code]), end=" ")
+    print(create_edges_simpel(pc_name, PC.availableFor, p_name), end=f" WITH {pc_name} ")
+    print(match(c_name, Course.n, [Course.code], [course_code]), end=" ")
     print(create_edges_simpel(pc_name, PC.referenceTo, c_name))
 
 
