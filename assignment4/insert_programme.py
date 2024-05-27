@@ -9,4 +9,8 @@ print(create_nodes(Programme.n, [Programme.name, Programme.code], [Programme.cod
 print(create_edges(Programme.bellongs_to, [], [], 
                    [Edge_data(f"p{i}", Programme.n, [Programme.code], [p],
                               f"d{i}", Department.n, [Department.name], [d], []) 
-                    for i, (_,p,d,_) in enumerate(lines)])) 
+                    for i, (_,p,d,_) in enumerate(lines)]))
+print(create_edges(Programme.has_director, [], [], 
+                   [Edge_data(f"p{i}", Programme.n, [Programme.code], [p],
+                              f"d{i}", ST.n, [Person.id], [dir], []) 
+                    for i, (_,p,_,dir) in enumerate(lines)]))

@@ -28,6 +28,7 @@ class Programme:
     name = "name"
     code = "code"
     bellongs_to = "BELONGS_TO"
+    has_director = "HAS_DIRECTOR"
 class PI:
     n = "ProgrammeInstance"
     year = "year"
@@ -161,7 +162,8 @@ def create_edges(relation: str, relation_props: List[str], uniqe_relation_props:
     return relation_statments + "\n" + values_statments
 
 def create_edges_simpel(from_name: str, relation: str, to_name: str, multiway = False):
-    return f"CREATE ({from_name})-[:{relation}]-{">" if not multiway else ""}({to_name})"
+    return f"CREATE ({from_name})-[:{relation}]->({to_name})"
+    # return f"CREATE ({from_name})-[:{relation}]-{">" if not multiway else ""}({to_name})"
 
 def match_on_edge(from_name: str,to_name: str,
                  relation: str, relation_props: List[str], relation_values:List[str], 
