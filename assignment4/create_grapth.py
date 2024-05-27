@@ -54,7 +54,7 @@ class CI:
     studyPeriod = "studyPeriod"
     seniorPlanningHours = "seniorPlanningHours"
     examinedBy = "examinedBy"
-    instanceOf = "instanceOf"
+    instanceOf = "INSTANCE_OF"
 class PC:
     n = "ProgrammeCourse"
     type = "type"
@@ -70,7 +70,7 @@ class Registration:
     grade = "grade"
 
 class TimeReported:
-    n = "TimeReported"
+    n = "TIME_REPORTED"
     hours = "hours"
 
 class TimeAssigned:

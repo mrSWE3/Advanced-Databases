@@ -11,4 +11,4 @@ with open('Teaching_Assistants.csv', newline='') as teacher_csv:
     for id, name, division in teachers:
         t[id] = (name, division)
         
-    print(create_value([Person.n, Teacher.n, TA.n], props, [[id, name] for id, (name, division) in t.items()]))
+    print(create_value([Person.n, Teacher.n, Student.n, TA.n], props, [[id, name] for id, (name, division) in t.items()]))
